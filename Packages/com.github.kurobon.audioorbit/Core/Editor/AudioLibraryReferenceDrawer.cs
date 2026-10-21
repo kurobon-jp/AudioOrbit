@@ -88,7 +88,7 @@ namespace AudioOrbit.Editor
                 Refresh();
             });
             root.Add(picker);
-            ReferencePropertyBinding.Track(root, Refresh);
+            ReferencePropertyBinding.Track(root, data, Refresh);
             Refresh();
         }
     }

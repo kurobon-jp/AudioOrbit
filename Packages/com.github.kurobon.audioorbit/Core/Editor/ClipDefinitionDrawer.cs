@@ -30,8 +30,6 @@ namespace AudioOrbit.Editor
                 pitch.floatValue = 1;
                 property.serializedObject.ApplyModifiedProperties();
             }
-            var data = property.serializedObject;
-            var binding = new ReferencePropertyBinding(property);
             var root = new VisualElement();
             var styles = AssetDatabase.LoadAssetAtPath<StyleSheet>("Packages/com.audioorbit.core/Editor/AudioLibraryStyles.uss");
             if (styles != null) root.styleSheets.Add(styles);
@@ -75,16 +73,8 @@ namespace AudioOrbit.Editor
             var field = AudioGeneratorPicker.CreateField("Clip");
             field.AddToClassList("audioorbit-clip-resource-field");
 
-            bool ResolveResource()
-            {
-                if (!binding.TryGet(out var current)) return false;
-                reference = current.FindPropertyRelative("resource");
-                return reference != null;
-            }
-
             void Refresh()
             {
-                if (!ResolveResource()) return;
                 var asset = reference.objectReferenceValue;
                 field.SetValueWithoutNotify(asset);
                 var clip = asset as AudioClip;
@@ -108,7 +98,6 @@ namespace AudioOrbit.Editor
 
             field.RegisterValueChangedCallback(e =>
             {
-                if (!ResolveResource()) return;
 #if UNITY_6000_3_OR_NEWER
                 if (e.newValue != null && !(e.newValue is IAudioGenerator))
 #else
@@ -120,7 +109,7 @@ namespace AudioOrbit.Editor
                 }
 
                 reference.objectReferenceValue = e.newValue;
-                data.ApplyModifiedProperties();
+                property.serializedObject.ApplyModifiedProperties();
                 Refresh();
             });
             root.Add(field);
@@ -136,7 +125,7 @@ namespace AudioOrbit.Editor
             advanced.Add(new PropertyField(property.FindPropertyRelative("PitchRandomRange"), "Pitch Range"));
             if (showWeight) advanced.Add(new PropertyField(property.FindPropertyRelative("Weight")));
             root.Add(advanced);
-            ReferencePropertyBinding.Track(root, Refresh);
+            root.TrackPropertyValue(reference, _ => Refresh());
             Refresh();
             return root;
         }

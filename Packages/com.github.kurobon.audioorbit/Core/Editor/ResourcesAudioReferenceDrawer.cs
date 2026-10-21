@@ -118,7 +118,7 @@ namespace AudioOrbit.Editor
                 var index = library.Entries.FindIndex(s => s != null && s.Key == key.stringValue);
                 if (index >= 0) AudioLibraryWindow.ShowAudio(library, index);
             };
-            ReferencePropertyBinding.Track(root, () => Refresh());
+            ReferencePropertyBinding.Track(root, data, () => Refresh());
             root.RegisterCallback<FocusInEvent>(_ => Refresh());
             Refresh();
             return root;

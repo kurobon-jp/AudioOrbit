@@ -17,8 +17,9 @@ namespace AudioOrbit.Tests.Editor
         {
             folder = "Assets/AudioOrbitClipSerialization_" + Guid.NewGuid().ToString("N");
             AssetDatabase.CreateFolder("Assets", Path.GetFileName(folder));
-            clip = AudioClip.Create("Serialization Test", 100, 1, 44100, false);
-            AssetDatabase.CreateAsset(clip, folder + "/Clip.asset");
+            var paths = AssetDatabase.FindAssets("t:AudioClip");
+            Assert.IsNotEmpty(paths);
+            clip = AssetDatabase.LoadAssetAtPath<AudioClip>(AssetDatabase.GUIDToAssetPath(paths[0]));
         }
         [TearDown] public void Cleanup() => AssetDatabase.DeleteAsset(folder);
 
@@ -28,7 +29,7 @@ namespace AudioOrbit.Tests.Editor
             var yaml = File.ReadAllText(AssetDatabase.GetAssetPath(library));
             StringAssert.Contains("resource: {fileID:", yaml);
             var copy = JsonUtility.FromJson<ClipDefinition>(JsonUtility.ToJson(library.Entries[0].Clips[0]));
-            Assert.AreEqual(clip, copy.Clip);
+            Assert.AreSame(clip, copy.Clip);
             Assert.True(copy.HasSupportedResource);
         }
 #if UNITY_6000_3_OR_NEWER
@@ -40,7 +41,7 @@ namespace AudioOrbit.Tests.Editor
             var definition = new ClipDefinition { Generator = new IAudioGenerator.Serializable(region) };
             var copy = JsonUtility.FromJson<ClipDefinition>(JsonUtility.ToJson(definition));
             Assert.AreSame(region, copy.Generator.definition);
-            Assert.AreEqual(clip, copy.Clip);
+            Assert.AreSame(clip, copy.Clip);
             copy.Clip = clip;
             Assert.AreSame(clip, copy.Generator.definition);
         }
