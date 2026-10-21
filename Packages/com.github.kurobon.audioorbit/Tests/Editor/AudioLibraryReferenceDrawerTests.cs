@@ -18,6 +18,7 @@ namespace AudioOrbit.Tests.Editor
     {
         private LibraryReferenceTestHost host;
         private EditorWindow window;
+        private SerializedObject data;
         [SetUp] public void Setup()
         {
             host = ScriptableObject.CreateInstance<LibraryReferenceTestHost>();
@@ -26,12 +27,14 @@ namespace AudioOrbit.Tests.Editor
         }
         [TearDown] public void Cleanup()
         {
+            window.rootVisualElement.Unbind();
             window.Close();
+            data?.Dispose();
             Object.DestroyImmediate(host);
         }
         [Test] public async Task NullReferenceCanSelectBackendEditAndClear()
         {
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             window.rootVisualElement.Add(new PropertyField(data.FindProperty("Reference")));
             window.rootVisualElement.Bind(data);
             await Task.Delay(150);
@@ -52,7 +55,7 @@ namespace AudioOrbit.Tests.Editor
         [Test] public async Task ArrayElementsAreIndependentAndExcludeDirectReferences()
         {
             CollectionAssert.DoesNotContain(AudioLibraryReferenceDrawer.ReferenceTypes, typeof(DirectAudioReference));
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             for (var i = 0; i < 2; i++)
                 window.rootVisualElement.Add(new PropertyField(data.FindProperty("References").GetArrayElementAtIndex(i)));
             window.rootVisualElement.Bind(data);

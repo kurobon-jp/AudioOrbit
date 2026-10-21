@@ -18,6 +18,7 @@ namespace AudioOrbit.Tests.Editor
     {
         private AudioReferenceTestHost host;
         private EditorWindow window;
+        private SerializedObject data;
         [SetUp] public void Setup()
         {
             host = ScriptableObject.CreateInstance<AudioReferenceTestHost>();
@@ -27,13 +28,15 @@ namespace AudioOrbit.Tests.Editor
         }
         [TearDown] public void Cleanup()
         {
+            window.rootVisualElement.Unbind();
             window.Close();
+            data?.Dispose();
             Object.DestroyImmediate(host);
         }
 
         [Test] public async Task ArrayElementsCanSelectSwitchAndClearPlaybackReferences()
         {
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             var array = data.FindProperty("References"); array.isExpanded = true;
             window.rootVisualElement.Add(new PropertyField(array));
             window.rootVisualElement.Bind(data);
@@ -65,7 +68,7 @@ namespace AudioOrbit.Tests.Editor
         {
             host.References[0] = new ResourcesAudioReference { Library = new ResourcesLibraryReference { LibraryPath = "first" }, Key = "first" };
             host.References[1] = new ResourcesAudioReference { Library = new ResourcesLibraryReference { LibraryPath = "second" }, Key = "second" };
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             var array = data.FindProperty("References");
             var root = new ResourcesAudioReferenceDrawer().CreatePropertyGUI(array.GetArrayElementAtIndex(0));
             window.rootVisualElement.Add(root);
@@ -87,7 +90,7 @@ namespace AudioOrbit.Tests.Editor
         [Test] public async Task ReplacedReferenceDoesNotLeaveAReadableOldDrawer()
         {
             host.Reference = new ResourcesAudioReference();
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             var root = new ResourcesAudioReferenceDrawer().CreatePropertyGUI(data.FindProperty("Reference"));
             window.rootVisualElement.Add(root);
             await Task.Delay(150);
@@ -100,11 +103,20 @@ namespace AudioOrbit.Tests.Editor
             root.RemoveFromHierarchy();
         }
 
+        [Test] public void DisposedSerializedObjectCannotResolveReference()
+        {
+            host.Reference = new ResourcesAudioReference();
+            var disposed = new SerializedObject(host);
+            var binding = new ReferencePropertyBinding(disposed.FindProperty("Reference"));
+            disposed.Dispose();
+            Assert.False(binding.TryGet(out _));
+        }
+
         [Test] public async Task SingleInterfaceFieldSupportsTextKeysAndExcludesLibraryReferences()
         {
             CollectionAssert.Contains(AudioReferenceDrawer.ReferenceTypes, typeof(EngineAudioReference));
             CollectionAssert.DoesNotContain(AudioReferenceDrawer.ReferenceTypes, typeof(ResourcesLibraryReference));
-            using var data = new SerializedObject(host);
+            data = new SerializedObject(host);
             window.rootVisualElement.Add(new PropertyField(data.FindProperty("Reference")));
             window.rootVisualElement.Bind(data);
             await Task.Delay(150);
