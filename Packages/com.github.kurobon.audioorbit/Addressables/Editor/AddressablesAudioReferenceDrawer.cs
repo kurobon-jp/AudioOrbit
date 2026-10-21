@@ -144,7 +144,7 @@ namespace AudioOrbit.Addressables.Editor
             void OnAddressablesChanged(AddressableAssetSettings settings, AddressableAssetSettings.ModificationEvent change, object data) => Refresh();
             root.RegisterCallback<AttachToPanelEvent>(_ => AddressableAssetSettings.OnModificationGlobal += OnAddressablesChanged);
             root.RegisterCallback<DetachFromPanelEvent>(_ => AddressableAssetSettings.OnModificationGlobal -= OnAddressablesChanged);
-            AudioOrbit.Editor.ReferencePropertyBinding.Track(root, data, () => Refresh());
+            AudioOrbit.Editor.ReferencePropertyBinding.Track(root, () => Refresh());
             root.RegisterCallback<FocusInEvent>(_ => Refresh());
             Refresh();
             return root;

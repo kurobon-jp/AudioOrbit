@@ -35,10 +35,11 @@ namespace AudioOrbit.Editor
             catch (NullReferenceException) { return false; }
         }
 
-        public static void Track(VisualElement root, SerializedObject data, Action refresh)
+        public static void Track(VisualElement root, Action refresh)
         {
-            root.RegisterCallback<AttachToPanelEvent>(evt => root.TrackSerializedObjectValue(data, _ => refresh()));
-            root.RegisterCallback<DetachFromPanelEvent>(_ => root.Unbind());
+            var update = root.schedule.Execute(refresh).Every(100);
+            root.RegisterCallback<DetachFromPanelEvent>(_ => update.Pause());
+            root.RegisterCallback<AttachToPanelEvent>(_ => update.Resume());
         }
     }
 }
