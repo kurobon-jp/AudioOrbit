@@ -32,7 +32,6 @@ namespace AudioOrbit.Editor
                         !property.hasMultipleDifferentValues && property.managedReferenceId == referenceId.Value));
             }
             catch (ObjectDisposedException) { return false; }
-            catch (ArgumentNullException e) when (e.ParamName == "_unity_self") { return false; }
             catch (NullReferenceException) { return false; }
         }
 
