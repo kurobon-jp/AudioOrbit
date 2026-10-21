@@ -1,0 +1,30 @@
+[
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioPlayback.cs",
+    "SHA256": "0739A9769976CBD23F838FE193545FEC776EFE2ED339F4D85BCBB33319B7D74C"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.AudioPlayback.cs",
+    "SHA256": "9920A4FB35A76329EAD8099997525535333BBC82A1E507E91A0107B70CCAFA87"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Playback.cs",
+    "SHA256": "EFB9F1D15C8D73050E200EA95A76DFB6B6FEAD96280B1D40AA5BB856F916E7C6"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Direct.cs",
+    "SHA256": "55BDAD268FAB89B5B856D6D7ADB085D2B7AE3E58881266040326BE53B7B0C0B2"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlaybackHandle.cs",
+    "SHA256": "2575246755E2F698BE7967EB8720FD6C242BBC8EA80F3ACCE78EB5399418E8FF"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Tests/Runtime/AudioPlaybackTests.cs",
+    "SHA256": "E569B4820354C92E22996B63B7B6D557F95693EF1D812E08A6F1FA5B44748010"
+  },
+  {
+    "Path": "Tools/Benchmarks/AudioPlaybackComparison.cs",
+    "SHA256": "7508CAA23E92C00E5289629F75634A779356F41F120D17EC3219F4F6487A3258"
+  }
+]

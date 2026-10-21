@@ -1,0 +1,150 @@
+[
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AsyncWait.cs",
+    "SHA256": "FFD1F86302A70847BA00FB9A39F289D78DB15B6520C8987F02002C0B9846B2B0"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioCategory.cs",
+    "SHA256": "A73B91B714E5DA1F6E9B976B8D7EB8E4778931EF3FC48BF73F4294690C8A8531"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioCategoryId.cs",
+    "SHA256": "384371B47B6659E2D60161153266975284565F59F3389DB707949C620F991479"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Control.cs",
+    "SHA256": "440EBF18CBFE4A23C440C0BC05197973CE663017C473580CEB2E680C8F6CC23A"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.cs",
+    "SHA256": "5C5A433156BA2FB9557B7374A52C2623C72DDACAB6E95B59FE5C2E671D2D395A"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Direct.cs",
+    "SHA256": "FBDECD5053B474BDC38699607FCD740D2696A884ACB93A52C5326334393A1BDD"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Editor.cs",
+    "SHA256": "30B7909D096EFF758CCEAF6F0BCCCB25F52EC216C5557A663E03E32F6E202C0A"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.LibraryLoading.cs",
+    "SHA256": "D027888444CB67A380584E487FFF4FCEA6B80030122183957F6669223E4C49AC"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Loading.cs",
+    "SHA256": "9B7F87D351FA17C3FB0546952632C9049874E9311A83FEF6F4C18C47FD471FAB"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Playback.cs",
+    "SHA256": "8F4E8DDAA74F424330D8F30312075DDDF5056CCFF0A9492358360548388F5320"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.References.cs",
+    "SHA256": "2D3CF63286E96DA4BC389986193C955694C591F86C0156CB670E9D82F5350668"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Requests.cs",
+    "SHA256": "C6E0E1284FBD593E075CE4DD92F748F4409A81A49C4282A2984A94EBF720E35E"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngineDriver.cs",
+    "SHA256": "6D4803C97802F998F993135CA5CAFC6E4DC21F6BE73866F7663D1217B19B19FB"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngineSettings.cs",
+    "SHA256": "24CEEA48EF2870E812D27DE893A7FF64B274EC6DBE30AB82101E45BDDE7E6B12"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/ClipDefinition.cs",
+    "SHA256": "8D6B8F4DC697321F4231233CB1EACFC8F7F4F5F1082B19599ABC15CB9577CF0B"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/Contracts.cs",
+    "SHA256": "6B7B82F86869F06538DA54FF9487BEC695954101228F82CB43FBF0A577D438B9"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/DirectSoundReference.cs",
+    "SHA256": "28996E5F286DF740017EEECDBAC9677FB2A4098C366B3802CB605E7853F00B37"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/EngineDefinition.cs",
+    "SHA256": "18FDB01E390A0CDB7EBFEF065E5723E0C828791B6FAA0CA125CF84C4BB6B1793"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/LoopRegionClip.cs",
+    "SHA256": "F5B45138794C3AA653CF18BE3CAADAFE25C6E0ED86C2BE75428D73C1BD8197E8"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/LoopRegionPlayback.cs",
+    "SHA256": "EF297FCE28D54E4428CA1FE8021F740408A2B7CA1FF72304D0AAA658E1F662A9"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/OrbitContext.cs",
+    "SHA256": "D825ACB0C99E95A05250E7D230D8D76A2EA76CE2E8903428150CAD710DDDA565"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/OrbitContext.Editor.cs",
+    "SHA256": "4D48DBB97A007B33FDEB5704351DDB3AFAEBF78543DBFA581F6BC494932463D7"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/Playback.cs",
+    "SHA256": "B66652A10A5BBBFD3AEDB86FDE45A50B1CBF0AF5A9F908CFD92670CE576522A6"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlaybackHandle.cs",
+    "SHA256": "A6F7426FBB6881969DA5711BFB6486F87113596A7BB5F37600B332C0FDFB1395"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlaybackLimitSettings.cs",
+    "SHA256": "5F72EDE74CF8C84007748838D9F5EBEE508B36E0CE4810D83C0C6B05AA669BA7"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlayOptions.cs",
+    "SHA256": "4C67928529A8A4F054DE78449977CFF52102E0D0ECC2E9579EE21CA51EBA7E99"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/RegionPlaybackCursor.cs",
+    "SHA256": "8453BFA781B4B27CD59FE36FE6EC92A7A37B7A6DFBA9D4A4958CC102C27F9F17"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/ResourcesSoundLibraryLoader.cs",
+    "SHA256": "11FC5FEFBEAC6484605BC850DEC9C39BE65708FE36DF2E75316F57A27551D8F5"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/ResourcesSoundReference.cs",
+    "SHA256": "23EDC1E448A25020B1A460F9071102CDA987DC4971C291CE7FF7C0C2A347612E"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SoundDefinition.cs",
+    "SHA256": "938DDFA37D582E227A435B858642A5C48F3BCC8B1C3F7AA086968C32B164EE8C"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SoundDefinitionDefaults.cs",
+    "SHA256": "97285C67F80587DB6FBD1497690BD774F51566FB5313D05224B9764BDB6FB1D9"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SoundKeyAttribute.cs",
+    "SHA256": "44706375CC72F64763374048B7FDF480BEEA5EB31871D804E6B7D158EB152554"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SoundLibrary.cs",
+    "SHA256": "9D04379E6449F41CB321F79FC2FA44CE68F9DB849880C38BC1F01E31834A58B0"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SoundPlayer.cs",
+    "SHA256": "9747F2A4CFD69309997BE10E4A636F6BE3134E5AB551637CBE1075BB37D700F3"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SpatialProfile.cs",
+    "SHA256": "03C9BBB594A04FA87471481228BDA98C583C36867306E793DAC0ECCC7B62D385"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/SpatialSettings.cs",
+    "SHA256": "B8E832C65DF47789D09742BBC06A5AC2889E9AF80E442A7F4A4A5026B82D7A74"
+  },
+  {
+    "Path": "Tools/Benchmarks/AudioOrbitScaling.cs",
+    "SHA256": "7B1524DC69F7A82CD738BB0224B44DF2F3AAED6CDCAFF7A51F2F8F85452AA41D"
+  }
+]

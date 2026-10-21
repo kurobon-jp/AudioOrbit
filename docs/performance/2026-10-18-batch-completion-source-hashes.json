@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Control.cs",
+    "SHA256": "CB1FB91D792B7042CA3AFB5DD9B176BD119C8328C366011DEA118BEF3215FAD6"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlaybackHandle.cs",
+    "SHA256": "5FB124949FB49E85A039DBA6BFD93F23A669115D5071BBA92DA05B64B40BAED6"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AsyncWait.cs",
+    "SHA256": "FFD1F86302A70847BA00FB9A39F289D78DB15B6520C8987F02002C0B9846B2B0"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Tests/Runtime/GroupStopTests.cs",
+    "SHA256": "2710C78E5485E44B8340EC27BF091548D2176826EA71C92174E7BEA55E1678A2"
+  },
+  {
+    "Path": "Tools/Benchmarks/AudioOrbitScaling.cs",
+    "SHA256": "DB8C0C34103012B4B757DC520451DFD27A71328F456C5A391CCD2EDB2F5A1C20"
+  }
+]

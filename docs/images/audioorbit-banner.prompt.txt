@@ -1,0 +1,1 @@
+Built-in image_gen. GitHub README banner for AudioOrbit. Midnight charcoal background, cyan audio waveform flowing into orbital ellipses with a warm amber core. Minimal technical brand graphic, wide 3:1 layout. Text: AudioOrbit / Audio library for Unity. No badges or screenshots.

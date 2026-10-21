@@ -1,0 +1,60 @@
+.audioorbit-details {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+}
+.audioorbit-section {
+    margin-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.3);
+    border-radius: 4px;
+}
+.audioorbit-section-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.audioorbit-section-title {
+    -unity-font-style: bold;
+    flex-grow: 1;
+}
+.audioorbit-clip {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.25);
+    border-radius: 3px;
+}
+.audioorbit-clip-heading {
+    margin-bottom: 5px;
+    align-items: center;
+}
+.audioorbit-clip-advanced {
+    margin-top: 4px;
+}
+.audioorbit-clip-advanced > .unity-foldout__toggle {
+    margin-left: 0;
+}
+.audioorbit-preview {
+    border-top-width: 1px;
+    border-top-color: rgba(128, 128, 128, 0.4);
+    padding-top: 6px;
+    margin-top: 4px;
+}
+.audioorbit-import {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.audioorbit-import > * {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,261 @@
+{
+  "TimestampUtc": "2026-10-20T01:44:21.1887984Z",
+  "Unity": "6000.3.10f1",
+  "Mode": "Editor Play Mode / Mono",
+  "Cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "Notes": "Selection uses a precompiled delegate with no per-call reflection, including old Array.IndexOf or the new returned index. Library counts are cached sessions; chosen reference and Engine key are last in registration order. 128 warmup, CPU2048x5; GC.Alloc metadata128x3. No I/O or Player/IL2CPP.",
+  "Samples": [
+    {
+      "Name": "Calibration4096",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 4128.0,
+      "MedianMicroseconds": 0.579248046875,
+      "MinMicroseconds": 0.526220703125,
+      "MaxMicroseconds": 0.792138671875,
+      "AllocatedBytes": [
+        528384,
+        528384,
+        528384
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        128,
+        128,
+        128
+      ],
+      "MicrosecondsPerOperation": [
+        0.526220703125,
+        0.792138671875,
+        0.701513671875,
+        0.579248046875,
+        0.55366210937499993
+      ]
+    },
+    {
+      "Name": "Empty",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.007763671875,
+      "MinMicroseconds": 0.00537109375,
+      "MaxMicroseconds": 0.0216796875,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.007763671875,
+        0.015478515625,
+        0.0216796875,
+        0.00537109375,
+        0.005517578125
+      ]
+    },
+    {
+      "Name": "Shuffle.ChooseAndClipIndex.Clips8",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.16352539062500002,
+      "MinMicroseconds": 0.15839843750000002,
+      "MaxMicroseconds": 0.174560546875,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.17177734375,
+        0.15927734375,
+        0.174560546875,
+        0.16352539062500002,
+        0.15839843750000002
+      ]
+    },
+    {
+      "Name": "Shuffle.ChooseAndClipIndex.Clips64",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.19980468750000002,
+      "MinMicroseconds": 0.159912109375,
+      "MaxMicroseconds": 0.270751953125,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.17231445312500002,
+        0.270751953125,
+        0.215087890625,
+        0.19980468750000002,
+        0.159912109375
+      ]
+    },
+    {
+      "Name": "Sequence.ChooseAndClipIndex.Clips256",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.139697265625,
+      "MinMicroseconds": 0.118505859375,
+      "MaxMicroseconds": 0.1564453125,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.139697265625,
+        0.131298828125,
+        0.118505859375,
+        0.1564453125,
+        0.14169921875
+      ]
+    },
+    {
+      "Name": "Library.PreloadCached.Sessions1",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 304.0,
+      "MedianMicroseconds": 1.9906738281249998,
+      "MinMicroseconds": 1.754833984375,
+      "MaxMicroseconds": 2.102490234375,
+      "AllocatedBytes": [
+        38912,
+        38912,
+        38912
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        512,
+        512,
+        512
+      ],
+      "MicrosecondsPerOperation": [
+        1.9920898437499999,
+        1.763232421875,
+        2.102490234375,
+        1.754833984375,
+        1.9906738281249998
+      ]
+    },
+    {
+      "Name": "Library.PreloadCached.Sessions128",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 304.0,
+      "MedianMicroseconds": 1.932568359375,
+      "MinMicroseconds": 1.8009765625,
+      "MaxMicroseconds": 2.097119140625,
+      "AllocatedBytes": [
+        38912,
+        38912,
+        38912
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        512,
+        512,
+        512
+      ],
+      "MicrosecondsPerOperation": [
+        2.097119140625,
+        2.0109375000000003,
+        1.8794921875000001,
+        1.932568359375,
+        1.8009765625
+      ]
+    },
+    {
+      "Name": "OrbitContext.Get.Existing.Definitions1",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.2572265625,
+      "MinMicroseconds": 0.2453125,
+      "MaxMicroseconds": 0.39130859375,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.32016601562499997,
+        0.2572265625,
+        0.2453125,
+        0.24545898437500002,
+        0.39130859375
+      ]
+    },
+    {
+      "Name": "OrbitContext.Get.Existing.Definitions128",
+      "Iterations": 2048,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.280810546875,
+      "MinMicroseconds": 0.27880859375,
+      "MaxMicroseconds": 0.29042968750000003,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.29042968750000003,
+        0.28271484375,
+        0.280029296875,
+        0.27880859375,
+        0.280810546875
+      ]
+    }
+  ]
+}

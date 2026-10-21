@@ -1,0 +1,30 @@
+[
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Playback.cs",
+    "SHA256": "8F4E8DDAA74F424330D8F30312075DDDF5056CCFF0A9492358360548388F5320"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AudioEngine.Loading.cs",
+    "SHA256": "7E7D04CE192D1BFB51ACF690E6CB9CD17768A70BC8DD7C9FC020A0C3CC45EABD"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/PlaybackHandle.cs",
+    "SHA256": "A6F7426FBB6881969DA5711BFB6486F87113596A7BB5F37600B332C0FDFB1395"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Runtime/AsyncWait.cs",
+    "SHA256": "FFD1F86302A70847BA00FB9A39F289D78DB15B6520C8987F02002C0B9846B2B0"
+  },
+  {
+    "Path": "Packages/com.audioorbit.core/Tests/Runtime/PlaybackLimitPlanningTests.cs",
+    "SHA256": "E6D78F3DBB8E4D95DA454F9437210561ACE14B592482A5A8A6762FE3211E3C06"
+  },
+  {
+    "Path": "Tools/Benchmarks/AudioOrbitBaseline.cs",
+    "SHA256": "E495E327ECE4B64C656142084A129D704B4D1EA417A4F7D14C60CD87F36B5262"
+  },
+  {
+    "Path": "Tools/Benchmarks/AudioOrbitAllocationBreakdown.cs",
+    "SHA256": "2F4238E4A9151E90B9A18A4E0E4A8F501418CFF842EF25B9E30244E6EB77037B"
+  }
+]

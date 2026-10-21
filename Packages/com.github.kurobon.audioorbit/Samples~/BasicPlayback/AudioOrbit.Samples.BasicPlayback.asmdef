@@ -1,0 +1,10 @@
+{
+  "name": "AudioOrbit.Samples.BasicPlayback",
+  "rootNamespace": "AudioOrbit.Samples.BasicPlayback",
+  "references": [
+    "AudioOrbit.Core",
+    "AudioOrbit.Addressables",
+    "Unity.Addressables",
+    "Unity.ugui"
+  ]
+}

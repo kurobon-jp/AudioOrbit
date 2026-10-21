@@ -1,0 +1,10 @@
+{
+  "name": "com.audioorbit.addressables",
+  "version": "0.1.0",
+  "displayName": "AudioOrbit Addressables",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.audioorbit.core": "0.1.0",
+    "com.unity.addressables": "1.22.3"
+  }
+}

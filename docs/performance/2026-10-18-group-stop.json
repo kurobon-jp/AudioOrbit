@@ -1,0 +1,614 @@
+{
+  "TimestampUtc": "2026-10-18T13:47:21.3044582Z",
+  "Unity": "6000.3.10f1",
+  "Cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "Platform": "WindowsEditor",
+  "Mode": "Editor Play Mode / Mono",
+  "Counter": "GC.Alloc byte metadata under isolated ProfilerMarker (128 iterations x 3); Stopwatch.GetTimestamp with profiler recording disabled (512/4096 iterations x 7)",
+  "Notes": "Synthetic one-second mono 44.1kHz clip; warmed AudioSource pool size 1; no network/decode. Timings are synchronous main-thread operation costs, not audible latency or DSP time. Real-context event samples exclude deferred dispatch. Controlled-context samples explicitly pump callbacks and exclude Unity queue internals. Harness does not modify runtime source. See source hashes for the measured version.",
+  "DeepProfiling": false,
+  "FrameBefore": 4293,
+  "FrameAfter": 6011,
+  "Samples": [
+    {
+      "Name": "Harness.Calibration4096ByteArray",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 4128.0,
+      "MedianMicroseconds": 0.650537109375,
+      "MinMicroseconds": 0.5562255859375,
+      "MaxMicroseconds": 1.075830078125,
+      "AllocatedBytes": [
+        528384,
+        528384,
+        528384
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        128,
+        128,
+        128
+      ],
+      "MicrosecondsPerOperation": [
+        0.60065917968749993,
+        0.5562255859375,
+        0.686279296875,
+        0.6022705078125,
+        0.6816650390625,
+        0.650537109375,
+        1.075830078125
+      ]
+    },
+    {
+      "Name": "Harness.Empty",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.0068359375,
+      "MinMicroseconds": 0.0050048828125,
+      "MaxMicroseconds": 0.007568359375,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.0068359375,
+        0.007568359375,
+        0.007080078125,
+        0.0054931640625,
+        0.0050292968749999995,
+        0.006982421875,
+        0.0050048828125
+      ]
+    },
+    {
+      "Name": "Registered.PlayStop.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.523828125,
+      "MinMicroseconds": 12.817578125,
+      "MaxMicroseconds": 15.993945312500001,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        15.993945312500001,
+        14.523828125,
+        15.93203125,
+        15.280273437500002,
+        13.58515625,
+        12.817578125,
+        13.904492187499999
+      ]
+    },
+    {
+      "Name": "Direct.PlayStop.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 876.0,
+      "MedianMicroseconds": 15.282031250000001,
+      "MinMicroseconds": 13.8720703125,
+      "MaxMicroseconds": 18.1861328125,
+      "AllocatedBytes": [
+        112128,
+        112128,
+        112128
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        1152,
+        1152,
+        1152
+      ],
+      "MicrosecondsPerOperation": [
+        18.1861328125,
+        14.6962890625,
+        17.7662109375,
+        13.8720703125,
+        16.7,
+        15.282031250000001,
+        14.222265625
+      ]
+    },
+    {
+      "Name": "PreloadedReference.PlayStop.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 696.0,
+      "MedianMicroseconds": 19.228515625,
+      "MinMicroseconds": 15.031054687500001,
+      "MaxMicroseconds": 19.742773437500002,
+      "AllocatedBytes": [
+        89088,
+        89088,
+        89088
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        896,
+        896,
+        896
+      ],
+      "MicrosecondsPerOperation": [
+        19.742773437500002,
+        19.4765625,
+        18.3619140625,
+        19.3548828125,
+        19.04921875,
+        15.031054687500001,
+        19.228515625
+      ]
+    },
+    {
+      "Name": "Registered.PlayPauseResumeStop.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 16.240625,
+      "MinMicroseconds": 15.1453125,
+      "MaxMicroseconds": 17.41640625,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        16.240625,
+        15.350195312499999,
+        16.0708984375,
+        17.41640625,
+        16.537695312500002,
+        15.1453125,
+        16.5818359375
+      ]
+    },
+    {
+      "Name": "Registered.PlayPauseResumeStop.OneSubscriber.EnqueueOnly",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 712.0,
+      "MedianMicroseconds": 16.732617187499997,
+      "MinMicroseconds": 14.683984375,
+      "MaxMicroseconds": 18.094921875,
+      "AllocatedBytes": [
+        91136,
+        91136,
+        91136
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        896,
+        896,
+        896
+      ],
+      "MicrosecondsPerOperation": [
+        16.39453125,
+        16.732617187499997,
+        18.094921875,
+        17.366015625000003,
+        17.2513671875,
+        15.4681640625,
+        14.683984375
+      ]
+    },
+    {
+      "Name": "Registered.PlayStopAll.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.124804687500001,
+      "MinMicroseconds": 13.410742187499999,
+      "MaxMicroseconds": 18.812890625,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        18.812890625,
+        13.799609375000001,
+        14.834179687499999,
+        13.410742187499999,
+        13.7900390625,
+        15.1138671875,
+        14.124804687500001
+      ]
+    },
+    {
+      "Name": "Registered.PlayStopAllAsync.Immediate",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.6306640625,
+      "MinMicroseconds": 13.102734375,
+      "MaxMicroseconds": 17.7421875,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        14.1150390625,
+        13.102734375,
+        14.6306640625,
+        13.574414062499999,
+        14.87421875,
+        16.1197265625,
+        17.7421875
+      ]
+    },
+    {
+      "Name": "Registered.PlayStopCategory.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.34765625,
+      "MinMicroseconds": 13.4515625,
+      "MaxMicroseconds": 14.539453125,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        14.539453125,
+        14.3890625,
+        14.3671875,
+        13.659765624999999,
+        14.34765625,
+        13.4515625,
+        14.2861328125
+      ]
+    },
+    {
+      "Name": "Registered.PlayStopLibrary.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.6177734375,
+      "MinMicroseconds": 13.52890625,
+      "MaxMicroseconds": 16.8076171875,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        14.6177734375,
+        16.8076171875,
+        13.52890625,
+        15.4544921875,
+        13.6431640625,
+        14.4087890625,
+        15.3005859375
+      ]
+    },
+    {
+      "Name": "Registered.PlayStopOwner.NoSubscriber",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.809375000000001,
+      "MinMicroseconds": 13.581249999999999,
+      "MaxMicroseconds": 19.7234375,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        19.7234375,
+        16.402734374999998,
+        14.6244140625,
+        14.809375000000001,
+        13.715234375,
+        13.581249999999999,
+        15.909765625
+      ]
+    },
+    {
+      "Name": "GroupStop.Empty.AllFilters",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 1.0125732421875,
+      "MinMicroseconds": 0.9722900390625,
+      "MaxMicroseconds": 1.2722900390625,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        1.2722900390625,
+        0.99079589843749993,
+        1.0125732421875,
+        1.1505126953125,
+        1.00390625,
+        1.04267578125,
+        0.9722900390625
+      ]
+    },
+    {
+      "Name": "Registered.PlayStop.WaitAfterCompletion",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 728.0,
+      "MedianMicroseconds": 12.827734375,
+      "MinMicroseconds": 12.6341796875,
+      "MaxMicroseconds": 14.9744140625,
+      "AllocatedBytes": [
+        93184,
+        93184,
+        93184
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        768,
+        768,
+        768
+      ],
+      "MicrosecondsPerOperation": [
+        12.827734375,
+        13.776953125,
+        12.81015625,
+        13.6181640625,
+        12.6341796875,
+        12.708203125,
+        14.9744140625
+      ]
+    },
+    {
+      "Name": "OrbitContext.Get.ExistingEngine",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.444140625,
+      "MinMicroseconds": 0.35971679687499997,
+      "MaxMicroseconds": 0.5084228515625,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.379150390625,
+        0.46845703125,
+        0.444140625,
+        0.5084228515625,
+        0.453076171875,
+        0.4046630859375,
+        0.35971679687499997
+      ]
+    },
+    {
+      "Name": "HeldPlayback.PauseResume.Dispatch.Subscribers0",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.3040771484375,
+      "MinMicroseconds": 0.24709472656249998,
+      "MaxMicroseconds": 0.3332275390625,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.2842529296875,
+        0.28269042968749997,
+        0.24709472656249998,
+        0.3040771484375,
+        0.3332275390625,
+        0.3314208984375,
+        0.312548828125
+      ]
+    },
+    {
+      "Name": "HeldPlayback.PauseResume.Dispatch.Subscribers1",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.8288330078125,
+      "MinMicroseconds": 0.8147705078125,
+      "MaxMicroseconds": 1.0463134765625,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.8288330078125,
+        0.8748046875,
+        0.82548828125,
+        1.0463134765625,
+        0.8218994140625,
+        0.8397705078125,
+        0.8147705078125
+      ]
+    },
+    {
+      "Name": "HeldPlayback.PauseResume.Dispatch.Subscribers8",
+      "Iterations": 4096,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 1.061865234375,
+      "MinMicroseconds": 1.01396484375,
+      "MaxMicroseconds": 1.0839111328125002,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        1.061865234375,
+        1.0263671875,
+        1.081396484375,
+        1.01396484375,
+        1.0839111328125002,
+        1.067529296875,
+        1.0447021484375
+      ]
+    },
+    {
+      "Name": "Limits.StopOldest.ReplaceExisting",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 14.0609375,
+      "MinMicroseconds": 13.376953125,
+      "MaxMicroseconds": 17.5498046875,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        17.5498046875,
+        13.597265625,
+        15.4466796875,
+        14.0609375,
+        13.376953125,
+        13.908984375,
+        14.64375
+      ]
+    },
+    {
+      "Name": "Limits.RejectNew.KeepExisting",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 424.0,
+      "MedianMicroseconds": 3.140234375,
+      "MinMicroseconds": 3.04921875,
+      "MaxMicroseconds": 4.3611328125,
+      "AllocatedBytes": [
+        54272,
+        54272,
+        54272
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        512,
+        512,
+        512
+      ],
+      "MicrosecondsPerOperation": [
+        4.3611328125,
+        3.23984375,
+        3.1060546875,
+        3.3513671875,
+        3.1070312500000004,
+        3.140234375,
+        3.04921875
+      ]
+    }
+  ]
+}
