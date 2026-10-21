@@ -1,0 +1,268 @@
+{
+  "TimestampUtc": "2026-10-18T13:51:56.1444541Z",
+  "Unity": "6000.3.10f1",
+  "Cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "Platform": "WindowsEditor",
+  "Count": 64,
+  "Memory": false,
+  "numRealVoices": 32,
+  "numVirtualVoices": 512,
+  "FrameBefore": 6553,
+  "FrameAfter": 7160,
+  "Notes": "Editor Play Mode / Mono. Engine driver disabled; explicit Tick delegate, no reflection inside measured operations. Synthetic 1s mono44.1k clip; warmed source pool. GC.Alloc byte metadata 16x3; CPU 128x5 (batch16x5); warmup16. Batch includes N Play calls, stop request, one explicit Tick; async WhenAll completion is awaited outside timing. Audio DSP/real audible voices not measured. Memory totals cover the entire Editor and are noisy; ownership counts are engine-local.",
+  "Samples": [
+    {
+      "Name": "Calibration4096",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 4128.0,
+      "MedianMicroseconds": 0.41015625,
+      "MinMicroseconds": 0.37578124999999996,
+      "MaxMicroseconds": 0.609375,
+      "AllocatedBytes": [
+        66048,
+        66048,
+        66048
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        16,
+        16,
+        16
+      ],
+      "MicrosecondsPerOperation": [
+        0.609375,
+        0.41015625,
+        0.37578124999999996,
+        0.42578125,
+        0.39375
+      ]
+    },
+    {
+      "Name": "Empty",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.0062499999999999995,
+      "MinMicroseconds": 0.0062499999999999995,
+      "MaxMicroseconds": 0.0109375,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.0109375,
+        0.0062499999999999995,
+        0.0062499999999999995,
+        0.0062499999999999995,
+        0.0062499999999999995
+      ]
+    },
+    {
+      "Name": "Tick.TwoD",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 8.20234375,
+      "MinMicroseconds": 7.58046875,
+      "MaxMicroseconds": 10.415625,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        10.20625,
+        10.415625,
+        7.7023437500000007,
+        8.20234375,
+        7.58046875
+      ]
+    },
+    {
+      "Name": "Limits.Engine.Reject",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 424.0,
+      "MedianMicroseconds": 5.72265625,
+      "MinMicroseconds": 5.51015625,
+      "MaxMicroseconds": 6.390625,
+      "AllocatedBytes": [
+        6784,
+        6784,
+        6784
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        64,
+        64,
+        64
+      ],
+      "MicrosecondsPerOperation": [
+        6.390625,
+        5.8015625,
+        5.63671875,
+        5.72265625,
+        5.51015625
+      ]
+    },
+    {
+      "Name": "Limits.Engine.Replace",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 18.00546875,
+      "MinMicroseconds": 16.70390625,
+      "MaxMicroseconds": 21.471874999999997,
+      "AllocatedBytes": [
+        10112,
+        10112,
+        10112
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        80,
+        80,
+        80
+      ],
+      "MicrosecondsPerOperation": [
+        19.607031250000002,
+        21.471874999999997,
+        16.865625,
+        16.70390625,
+        18.00546875
+      ]
+    },
+    {
+      "Name": "Limits.AllScopes.Replace",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 37.77890625,
+      "MinMicroseconds": 35.8921875,
+      "MaxMicroseconds": 38.765625,
+      "AllocatedBytes": [
+        10112,
+        10112,
+        10112
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        80,
+        80,
+        80
+      ],
+      "MicrosecondsPerOperation": [
+        38.352343749999996,
+        37.77890625,
+        37.0859375,
+        35.8921875,
+        38.765625
+      ]
+    },
+    {
+      "Name": "Tick.Attached.Moving",
+      "Iterations": 128,
+      "Repeats": 5,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 32.45078125,
+      "MinMicroseconds": 26.821875,
+      "MaxMicroseconds": 40.296875,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        32.45078125,
+        33.295312499999994,
+        40.296875,
+        26.93359375,
+        26.821875
+      ]
+    },
+    {
+      "Name": "Batch.PlayAll.StopAll.Fade.Tick",
+      "Iterations": 16,
+      "Repeats": 5,
+      "BytesPerOperation": 40448.0,
+      "MedianMicroseconds": 1235.7125,
+      "MinMicroseconds": 1181.70625,
+      "MaxMicroseconds": 1320.51875,
+      "AllocatedBytes": [
+        647168,
+        647168,
+        647168
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        5120,
+        5120,
+        5120
+      ],
+      "MicrosecondsPerOperation": [
+        1320.51875,
+        1282.85625,
+        1207.1,
+        1235.7125,
+        1181.70625
+      ]
+    },
+    {
+      "Name": "Batch.PlayAll.StopAllAsync.Fade.Tick",
+      "Iterations": 16,
+      "Repeats": 5,
+      "BytesPerOperation": 100194.0,
+      "MedianMicroseconds": 2037.93125,
+      "MinMicroseconds": 1952.9625,
+      "MaxMicroseconds": 2064.7062499999997,
+      "AllocatedBytes": [
+        1603104,
+        1603104,
+        1603104
+      ],
+      "AllocationIterations": 16,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        13464,
+        13464,
+        13464
+      ],
+      "MicrosecondsPerOperation": [
+        2037.93125,
+        2009.0812500000002,
+        2060.55,
+        2064.7062499999997,
+        1952.9625
+      ]
+    }
+  ],
+  "MemoryPhases": null
+}

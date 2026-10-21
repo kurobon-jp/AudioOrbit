@@ -1,0 +1,47 @@
+[
+  {
+    "Owner": "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+    "BytesPerPlayback": 120.0,
+    "AllocationsPerPlayback": 2
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+    "BytesPerPlayback": 272.0,
+    "AllocationsPerPlayback": 1
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+    "BytesPerPlayback": 264.0,
+    "AllocationsPerPlayback": 1
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+    "BytesPerPlayback": 312.0,
+    "AllocationsPerPlayback": 2
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.PrepareRegion()",
+    "BytesPerPlayback": 80.0,
+    "AllocationsPerPlayback": 1
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+    "BytesPerPlayback": 112.0,
+    "AllocationsPerPlayback": 1
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+    "BytesPerPlayback": 824.0,
+    "AllocationsPerPlayback": 6
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+    "BytesPerPlayback": 864.0,
+    "AllocationsPerPlayback": 7
+  },
+  {
+    "Owner": "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+    "BytesPerPlayback": 64.0,
+    "AllocationsPerPlayback": 1
+  }
+]

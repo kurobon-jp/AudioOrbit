@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2832148cf59cbf4ca970fb1969ba671, type: 3}
+  m_Name: EngineSettings
+  m_EditorClassIdentifier: AudioOrbit.Core::AudioOrbit.AudioEngineSettings
+  InitialPoolSize: 4
+  MaxPoolSize: 16
+  MaxPlaybacks: 16
+  LimitBehavior: 0
+  DefaultCategory: {fileID: 0}
+  DefaultSpatialProfile: {fileID: 0}
+  TargetLostBehavior: 1
+  OwnerLostBehavior: 1
+  LifetimeFadeSeconds: 0.1
+  DiagnosticsEnabled: 1

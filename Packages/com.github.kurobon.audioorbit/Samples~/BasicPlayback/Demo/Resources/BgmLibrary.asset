@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a947fc3b6307d143828b0cc59e91c24, type: 3}
+  m_Name: BgmLibrary
+  m_EditorClassIdentifier: 
+  defaults:
+    Category: {fileID: 11400000, guid: c4f30659d0886c74c8fac03bb6366c87, type: 2}
+    SpatialProfile: {fileID: 0}
+    Volume: 1
+    Loop: 1
+    SelectionMode: 0
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+  definitions:
+  - Key: bgm_intro_loop_outro_1
+    DisplayName: bgm_intro_loop_outro_1
+    Category: {fileID: 11400000, guid: c4f30659d0886c74c8fac03bb6366c87, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 1
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: 69d4eb4d0c8a8d7449a48b4a80a77dff, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: bgm_intro_loop_outro_2
+    DisplayName: bgm_intro_loop_outro_2
+    Category: {fileID: 11400000, guid: c4f30659d0886c74c8fac03bb6366c87, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 1
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: 2630413028f8aa149a616f354941e503, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0

@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a947fc3b6307d143828b0cc59e91c24, type: 3}
+  m_Name: SeLibrary
+  m_EditorClassIdentifier: 
+  defaults:
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Volume: 1
+    Loop: 0
+    SelectionMode: 0
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+  definitions:
+  - Key: coin
+    DisplayName: coin
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: 71eaa9e0786802f4fae27103f2327100, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: explosion
+    DisplayName: explosion
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: cfe3e50dceae2ea4693f9cb24bff54cd, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: hurt
+    DisplayName: hurt
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: aa04a6691d07b2840ab99f466a45cb7b, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: jump
+    DisplayName: jump
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: 40d0153d496e2fb44b4cddff43bd4d74, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: power_up
+    DisplayName: power_up
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: e9c93e86b7b55ce4ba9f96c42dcbe67d, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0
+  - Key: tap
+    DisplayName: tap
+    Category: {fileID: 11400000, guid: 1a05e6c517beaa24797accc6cc401107, type: 2}
+    SpatialProfile: {fileID: 0}
+    Loop: 0
+    Volume: 1
+    Limits:
+      MaxPlaybacks: 0
+      MaxPlaybacksPerOwner: 0
+      CooldownSeconds: 0
+      OwnerCooldownSeconds: 0
+      Behavior: 0
+    Clips:
+    - resource: {fileID: 8300000, guid: e11c4603ef9a49346b39dd833361c841, type: 3}
+      Volume: 1
+      Pitch: 1
+      VolumeRandomRange: 0
+      PitchRandomRange: 0
+      Weight: 1
+    SelectionMode: 0

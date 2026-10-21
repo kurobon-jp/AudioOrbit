@@ -1,0 +1,18 @@
+{
+  "name": "com.github.kurobon.audioorbit",
+  "version": "0.1.0",
+  "displayName": "AudioOrbit",
+  "description": "Unity audio runtime with pooled playback, async control, resource leases and explicit source ownership.",
+  "unity": "2022.3",
+  "author": {
+    "name": "kurobon",
+    "url": "https://github.com/kurobon-jp"
+  },
+  "samples": [
+    {
+      "path": "Samples~/BasicPlayback",
+      "displayName": "Basic Playback",
+      "description": "SE one-shots, VOICE preloading and completion, and BGM crossfades"
+    }
+  ]
+}

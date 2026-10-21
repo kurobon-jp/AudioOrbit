@@ -1,0 +1,2888 @@
+{
+  "Unity": "6000.3.10f1",
+  "Iterations": 16,
+  "TotalBytes": 22528,
+  "BytesPerOperation": 1408.0,
+  "Allocations": [
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 184,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 312,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 16,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle..ctor()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 64,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::PlaybackHandle.InitializeRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.CreateRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 128,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 112,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 264,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 32,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 208,
+      "Stack": [
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Start()",
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    },
+    {
+      "Bytes": 88,
+      "Stack": [
+        "AudioOrbit.Core.dll!::<LoadPlayback>d__77.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.LoadPlayback()",
+        "AudioOrbit.Core.dll!::<>c__DisplayClass105_0.<Play>b__0()",
+        "AudioOrbit.Core.dll!::<RunRequest>d__106.MoveNext()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.RunRequest()",
+        "AudioOrbit.Core.dll!AudioOrbit::AudioEngine.Play()",
+        "PipelineRunScript_AudioOrbitAllocationBreakdown_8a604d7207f94571942ae9fc0e587168.dll!::<Main>d__0.MoveNext()",
+        "mscorlib.dll!::MoveNextRunner.InvokeMoveNext()",
+        "mscorlib.dll!System.Threading::ExecutionContext.RunInternal()",
+        "mscorlib.dll!System.Threading::ExecutionContext.Run()",
+        "mscorlib.dll!::MoveNextRunner.Run()",
+        "mscorlib.dll!::<>c.<.cctor>b__7_0()",
+        "UnityEngine.CoreModule.dll!::WorkRequest.Invoke()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.Exec()",
+        "UnityEngine.CoreModule.dll!UnityEngine::UnitySynchronizationContext.ExecuteTasks()"
+      ]
+    }
+  ]
+}

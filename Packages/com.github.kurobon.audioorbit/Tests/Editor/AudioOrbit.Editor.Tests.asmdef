@@ -1,0 +1,14 @@
+{
+  "name": "AudioOrbit.Editor.Tests",
+  "references": [
+    "AudioOrbit.Core",
+    "AudioOrbit.Editor",
+    "AudioOrbit.Tests"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

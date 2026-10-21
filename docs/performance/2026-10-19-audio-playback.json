@@ -1,0 +1,129 @@
+{
+  "TimestampUtc": "2026-10-18T18:46:30.0740512Z",
+  "Unity": "6000.3.10f1",
+  "Mode": "Editor Play Mode / Mono",
+  "Cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "Notes": "Same registered looping Clip, warmed source pool1, no subscribers. 128 warmup, CPU512x7 with recording disabled; GC.Alloc main-thread metadata128x3. Reusable instance creation excluded. No Player/IL2CPP measurement.",
+  "Samples": [
+    {
+      "Name": "Calibration4096",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 4128.0,
+      "MedianMicroseconds": 0.6373046875,
+      "MinMicroseconds": 0.5576171875,
+      "MaxMicroseconds": 0.7888671875,
+      "AllocatedBytes": [
+        528384,
+        528384,
+        528384
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        128,
+        128,
+        128
+      ],
+      "MicrosecondsPerOperation": [
+        0.6373046875,
+        0.6263671875,
+        0.5576171875,
+        0.56777343750000009,
+        0.6509765625,
+        0.7359375,
+        0.7888671875
+      ]
+    },
+    {
+      "Name": "Empty",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 0.0,
+      "MedianMicroseconds": 0.0072265625,
+      "MinMicroseconds": 0.006640625,
+      "MaxMicroseconds": 0.008984375,
+      "AllocatedBytes": [
+        0,
+        0,
+        0
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        0,
+        0,
+        0
+      ],
+      "MicrosecondsPerOperation": [
+        0.008984375,
+        0.0068359375,
+        0.0068359375,
+        0.006640625,
+        0.0078125,
+        0.0072265625,
+        0.007421875
+      ]
+    },
+    {
+      "Name": "Engine.Play.Stop",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 632.0,
+      "MedianMicroseconds": 13.774999999999999,
+      "MinMicroseconds": 13.1392578125,
+      "MaxMicroseconds": 16.2052734375,
+      "AllocatedBytes": [
+        80896,
+        80896,
+        80896
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        640,
+        640,
+        640
+      ],
+      "MicrosecondsPerOperation": [
+        13.1392578125,
+        13.172656250000001,
+        13.818164062500001,
+        16.1541015625,
+        13.524609375,
+        16.2052734375,
+        13.774999999999999
+      ]
+    },
+    {
+      "Name": "AudioPlayback.Play.Stop",
+      "Iterations": 512,
+      "Repeats": 7,
+      "BytesPerOperation": 424.0,
+      "MedianMicroseconds": 14.8892578125,
+      "MinMicroseconds": 14.313671875,
+      "MaxMicroseconds": 16.728125,
+      "AllocatedBytes": [
+        54272,
+        54272,
+        54272
+      ],
+      "AllocationIterations": 128,
+      "AllocationRepeats": 3,
+      "AllocationEvents": [
+        512,
+        512,
+        512
+      ],
+      "MicrosecondsPerOperation": [
+        16.728125,
+        16.073828125000002,
+        15.000195312499999,
+        14.537109375,
+        14.313671875,
+        14.4970703125,
+        14.8892578125
+      ]
+    }
+  ]
+}

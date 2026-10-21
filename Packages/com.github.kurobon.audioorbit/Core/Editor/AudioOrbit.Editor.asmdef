@@ -1,0 +1,1 @@
+{"name":"AudioOrbit.Editor","rootNamespace":"AudioOrbit.Editor","references":["AudioOrbit.Core"],"includePlatforms":["Editor"]}
