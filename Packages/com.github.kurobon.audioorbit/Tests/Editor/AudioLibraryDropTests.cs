@@ -68,9 +68,15 @@ namespace AudioOrbit.Tests.Editor
             library.Entries[0].Clips.Add(new ClipDefinition { Clip = first });
             await Task.Delay(100);
             typeof(AudioLibraryWindow).GetMethod("NavigateToAudio", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(window, new object[] { 0 });
-            await Task.Delay(100);
-            var field = window.rootVisualElement.Q(className: "audioorbit-clip-resource-field");
-            Assert.NotNull(field);
+            VisualElement field = null;
+            var deadline = EditorApplication.timeSinceStartup + 3;
+            while (EditorApplication.timeSinceStartup < deadline)
+            {
+                field = window.rootVisualElement.Q(className: "audioorbit-clip-resource-field");
+                if (field != null && field.panel != null) break;
+                await Task.Delay(20);
+            }
+            Assert.NotNull(field, "The bound Clips list must create its Clip field before testing drop propagation.");
             var child = new VisualElement(); field.Add(child);
             var reached = false;
             child.RegisterCallback<DragPerformEvent>(e => { reached = true; e.StopImmediatePropagation(); });

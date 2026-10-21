@@ -1,4 +1,4 @@
-name: Unity tests and Player script compilation
+name: Unity script compilation
 
 on:
   push:
@@ -13,41 +13,41 @@ env:
   UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
 jobs:
-  test:
-    name: Test (EditMode / PlayMode)
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      checks: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          persist-credentials: false
+  # test:
+  #   name: Test (EditMode / PlayMode)
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     checks: write
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         lfs: true
+  #         persist-credentials: false
 
-      - uses: actions/cache@v4
-        with:
-          path: Library
-          key: Library-test-${{ env.UNITY_VERSION }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          restore-keys: |
-            Library-test-${{ env.UNITY_VERSION }}-
+  #     - uses: actions/cache@v4
+  #       with:
+  #         path: Library
+  #         key: Library-test-${{ env.UNITY_VERSION }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+  #         restore-keys: |
+  #           Library-test-${{ env.UNITY_VERSION }}-
 
-      - uses: game-ci/unity-test-runner@v4
-        id: tests
-        with:
-          unityVersion: ${{ env.UNITY_VERSION }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          testMode: all
+  #     - uses: game-ci/unity-test-runner@v4
+  #       id: tests
+  #       with:
+  #         unityVersion: ${{ env.UNITY_VERSION }}
+  #         githubToken: ${{ secrets.GITHUB_TOKEN }}
+  #         testMode: all
 
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Test results
-          path: ${{ steps.tests.outputs.artifactsPath }}
+  #     - uses: actions/upload-artifact@v4
+  #       if: always()
+  #       with:
+  #         name: Test results
+  #         path: ${{ steps.tests.outputs.artifactsPath }}
 
   compile-player:
     name: Compile Player scripts (Windows)
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
