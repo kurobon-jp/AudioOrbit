@@ -209,13 +209,16 @@ namespace AudioOrbit.Editor
                 selected = next;
                 ShowDetails();
             };
-            table.RegisterCallback<DragUpdatedEvent>(e =>
+            var tableDropArea = new VisualElement { style = { flexGrow = 1 } };
+            tableDropArea.Add(table);
+            table.style.flexGrow = 1;
+            tableDropArea.RegisterCallback<DragUpdatedEvent>(e =>
             {
                 if (library == null || DraggedClips().Length == 0) return;
                 DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
                 e.StopImmediatePropagation();
             }, TrickleDown.TrickleDown);
-            table.RegisterCallback<DragPerformEvent>(e =>
+            tableDropArea.RegisterCallback<DragPerformEvent>(e =>
             {
                 if (library == null) return;
                 var clips = DraggedClips();
@@ -224,7 +227,7 @@ namespace AudioOrbit.Editor
                 DragAndDrop.AcceptDrag();
                 AddClips(clips);
             }, TrickleDown.TrickleDown);
-            split.Add(table);
+            split.Add(tableDropArea);
             var right = new VisualElement();
             details = new ScrollView { name = "audioorbit-library-details" };
             details.contentContainer.AddToClassList("audioorbit-details");
@@ -415,7 +418,9 @@ namespace AudioOrbit.Editor
             selectionField.TrackPropertyValue(mode,
                 p => selectionField.tooltip = SelectionDescription((ClipSelectionMode)p.enumValueIndex));
             clipsSection.Add(selectionField);
-            var clipsField = new PropertyField(property.FindPropertyRelative("Clips"), "Clips");
+            var clipsProperty = property.FindPropertyRelative("Clips");
+            clipsProperty.isExpanded = true;
+            var clipsField = new PropertyField(clipsProperty, "Clips");
             clipsField.name = "sound-clips";
             clipsField.tooltip = "Drop audio assets here to append Clips to this Audio.";
             clipsField.RegisterCallback<DragUpdatedEvent>(e =>
@@ -440,11 +445,6 @@ namespace AudioOrbit.Editor
                 Commit();
             }, TrickleDown.TrickleDown);
             clipsSection.Add(clipsField);
-            clipsField.schedule.Execute(() =>
-            {
-                var foldout = clipsField.Q<Foldout>();
-                if (foldout != null) foldout.value = true;
-            });
             var advanced = new Foldout { text = "Advanced", value = false, viewDataKey = "sound-advanced" };
             advanced.AddToClassList("audioorbit-section");
             advanced.Add(new PropertyField(property.FindPropertyRelative("SpatialProfile")));
