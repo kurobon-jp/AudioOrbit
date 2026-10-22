@@ -100,6 +100,34 @@ namespace AudioOrbit.Tests.Editor
             root.RemoveFromHierarchy();
         }
 
+        [Test] public async Task DirectDrawerKeepsTrackingAfterChangingReferenceType()
+        {
+            using var data = new SerializedObject(host);
+            var root = new AudioReferenceDrawer().CreatePropertyGUI(data.FindProperty("Reference"));
+            window.rootVisualElement.Add(root);
+            try
+            {
+                await Task.Delay(150);
+                Assert.Null(root.GetFirstAncestorOfType<PropertyField>());
+                var picker = root.Q<DropdownField>("reference-type");
+                picker.value = ObjectNames.NicifyVariableName(nameof(EngineAudioReference));
+                Assert.IsInstanceOf<EngineAudioReference>(host.Reference);
+                Assert.True(picker.enabledSelf);
+
+                data.FindProperty("Reference").managedReferenceValue = new DirectAudioReference();
+                data.ApplyModifiedProperties();
+                var deadline = EditorApplication.timeSinceStartup + 3;
+                while (picker.enabledSelf && EditorApplication.timeSinceStartup < deadline)
+                    await Task.Delay(20);
+                Assert.False(picker.enabledSelf, "Tracking must invalidate the old drawer when the reference is replaced externally.");
+            }
+            finally
+            {
+                root.Unbind();
+                root.RemoveFromHierarchy();
+            }
+        }
+
         [Test] public async Task SingleInterfaceFieldSupportsTextKeysAndExcludesLibraryReferences()
         {
             CollectionAssert.Contains(AudioReferenceDrawer.ReferenceTypes, typeof(EngineAudioReference));

@@ -89,6 +89,8 @@ namespace AudioOrbit.Editor
                 if (updated != null) binding = new ReferencePropertyBinding(updated);
                 Refresh();
                 if (updated != null && field != null) field.BindProperty(updated);
+                if (updated != null && field == null)
+                    ReferencePropertyBinding.Track(root, data, Refresh);
             });
             root.Add(picker);
             ReferencePropertyBinding.Track(root, data, Refresh);
