@@ -206,8 +206,8 @@ playback.Play();
 
 | Reference Type | 設定と動作 |
 |---|---|
-| Resources Audio Reference | Resourcesフォルダ内のLibraryを選択します。 |
-| Addressables Audio Reference | Addressable登録済みのLibraryを選択します。 |
+| Resources Library Reference | Resourcesフォルダ内のLibraryを選択します。 |
+| Addressables Library Reference | Addressable登録済みのLibraryを選択します。 |
 
 ## AudioReference
 
