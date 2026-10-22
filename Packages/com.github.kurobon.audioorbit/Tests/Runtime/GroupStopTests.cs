@@ -13,7 +13,7 @@ namespace AudioOrbit.Tests
         private AudioEngine engine;
         private AudioCategory firstCategory, secondCategory;
         private AudioLibrary firstLibrary, secondLibrary;
-        private LibraryHandle firstRegistration;
+        private AudioLibrary firstRegistration;
         private AudioClip clip;
         private T Asset<T>() where T : ScriptableObject
         { var asset = ScriptableObject.CreateInstance<T>(); objects.Add(asset); return asset; }
@@ -26,7 +26,7 @@ namespace AudioOrbit.Tests
             clip = AudioClip.Create("group stop", 44100, 1, 44100, false); objects.Add(clip);
             firstLibrary = Library("first", firstCategory); secondLibrary = Library("second", secondCategory);
             engine = new AudioEngine(settings);
-            firstRegistration = engine.RegisterLibrary(firstLibrary); engine.RegisterLibrary(secondLibrary);
+            firstRegistration = firstLibrary; engine.Preload(firstLibrary); engine.Preload(secondLibrary);
         }
         private AudioLibrary Library(string key, AudioCategory category)
         {

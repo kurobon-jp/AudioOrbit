@@ -83,7 +83,7 @@ public sealed class AudioExample : MonoBehaviour
     private void Awake()
     {
         engine = new AudioEngine(settings);
-        engine.RegisterLibrary(library);
+        engine.Preload(library);
         attack = engine.CreatePlayback("attack");
         attack.StateChanged += (_, state) => Debug.Log(state);
     }
@@ -139,7 +139,20 @@ A new handle starts in `Idle`. Subscribe with `playback.StateChanged += OnStateC
 
 ### Engine-wide stop operations
 
-The engine provides StopAll, StopCategory, StopOwner, and StopLibrary, each with an Async counterpart. Fades use unscaled time.
+The engine provides StopAll, StopCategory, StopOwner, and StopLibrary, each with an Async counterpart. Pass the target AudioLibrary to StopLibrary. Fades use unscaled time.
+
+### Already loaded AudioLibrary
+
+```csharp
+engine.Preload(library);
+var playback = engine.CreatePlayback("attack");
+playback.Play();
+
+// Drop this Library's engine cache when it is no longer needed.
+engine.ReleaseLibrary(library);
+```
+
+`Preload(AudioLibrary)` registers an already loaded asset synchronously. Repeating it with the same asset does not register duplicate keys. It uses the same cache management as loaders and Library references. `ReleaseLibrary` drops the engine's cache hold; active playback keeps the Library until it ends. The engine does not destroy an asset supplied by the caller.
 
 ## AudioLibraryLoader
 
@@ -181,15 +194,39 @@ playback.Play();
 `IAudioLibraryReference` identifies the Library to load. The Resources implementation stores a path; the Addressables implementation stores an AssetReference.
 
 ```csharp
-var libraryReference = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" };
-await engine.PreloadAsync(libraryReference, token);
-// When the Library cache is no longer needed
-engine.ReleaseLibrary(libraryReference);
+[SerializeReference] private IAudioLibraryReference library;
+
+await engine.PreloadAsync(library, token);
+var playback = engine.CreatePlayback("bgm");
+playback.Play();
 ```
+
+![LibraryReference](docs/images/library_reference.png)
+
+| Reference Type | Configuration and behavior |
+|---|---|
+| Resources Library Reference | Select a library inside a Resources folder and an Audio entry.  |
+| Addressables Library Reference | Select an Addressable library and an Audio entry.  |
 
 ## AudioReference
 
 `IAudioReference` identifies what to play. Resources and Addressables references combine library loading information with an Audio entry key. Create a handle with `engine.CreatePlayback(reference)` and call `Play()` to load an unloaded library automatically. ResourcesAudioReference and AddressablesAudioReference implement `IAudioReference` and hold a Library reference plus an Audio entry key. The engine manages loaders created by Library references.
+
+```csharp
+[SerializeReference] private IAudioReference bgmReference;
+
+var playback = engine.CreatePlayback(bgmReference);
+playback.Play();
+```
+
+![AudioReference](docs/images/audio_reference.png)
+
+| Reference Type | Configuration and behavior |
+|---|---|
+| Resources Audio Reference | Select a library inside a Resources folder and an Audio entry. Unloaded libraries load automatically when playback starts |
+| Addressables Audio Reference | Select an Addressable library and an Audio entry. Unloaded libraries load automatically when playback starts |
+| Engine Audio Reference | Enter the Key of an Audio entry registered with the selected Engine as text |
+| Direct Audio Reference | Assign an AudioClip directly |
 
 Engine Audio Reference uses a registered key, while Direct Audio Reference points directly to a Clip; neither loads a library automatically.
 
@@ -207,17 +244,6 @@ Engine Audio Reference uses a registered key, while Direct Audio Reference point
 
 `ResourcesAudioReference` holds a Library of type `ResourcesLibraryReference` plus an Audio entry key. The Library reference stores the Resources-relative path. Its Inspector provides a Library field, Audio selector, and button to open Library Manager.
 
-```csharp
-private ResourcesAudioReference reference = new ResourcesAudioReference
-{
-    Library = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" },
-    Key = "voice_attack"
-};
-
-// In the first example's Awake, replace RegisterLibrary and CreatePlayback("attack") with:
-attack = engine.CreatePlayback(reference);
-```
-
 For example, place the library at `Assets/Game/Resources/Audio/VoiceLibrary.asset`. Use the first example's `PlayAttack()` and destruction cleanup.
 
 Declare `[SerializeReference] private IAudioLibraryReference library;` to configure only a Library, choosing ResourcesLibraryReference or AddressablesLibraryReference without an Audio selector. Use `IAudioReference` for playback references. Arrays are supported.
@@ -233,7 +259,6 @@ using AudioOrbit.Addressables;
 
 [SerializeField] private AddressablesAudioReference attackReference;
 
-// In the first example's Awake, replace RegisterLibrary and CreatePlayback("attack") with:
 attack = engine.CreatePlayback(attackReference);
 ```
 
@@ -445,12 +470,13 @@ Region playback retains an additional decoded float PCM copy of the entire clip.
 ## External AudioSources
 
 ```csharp
-var source = engine.RegisterExternalSource(audioSource);
-var playback = engine.CreatePlayback(source);
+using var playback = engine.CreatePlayback(audioSource);
 playback.Play();
 ```
 
-This plays the Clip assigned to the AudioSource. AudioOrbit controls the source while registered, so disable `playOnAwake`. `ExternalSourceOptions.Key` is optional. Without a Key, limits are tracked per registration. An explicit Key shares limits and cooldowns with other playback using that Key.
+This plays the Clip assigned to the AudioSource. AudioOrbit controls the source for the lifetime of the handle, so disable `playOnAwake`. `ExternalSourceOptions.Key` is optional. Without a Key, limits are tracked per handle. An explicit Key shares limits and cooldowns with other playback using that Key.
+
+Pass settings through `CreatePlayback(audioSource, externalSourceOptions)` when needed. Only one handle can manage a given AudioSource. Reuse the handle for repeated playback. Disposing it stops playback, restores the original AudioSource settings, and releases control. Disposing the engine also restores the source.
 
 ## OrbitContext
 
@@ -500,17 +526,10 @@ OrbitContext is optional. To own an Engine yourself, create it with `new AudioEn
 1. Create a Context ScriptableObject through `Create > AudioOrbit > Orbit Context` and click Assign in its Inspector to register it in Preloaded Assets. Register only one Context.
 2. Add Engines with Key, Settings, and optional Libraries.
 3. Add AudioPlayer and select an Engine. The default is `Default`. Identical keys share an engine; different keys select independent engines. Keys are case-sensitive.
-4. Choose a Reference Type and configure Reference according to the table below.
+4. Choose a Reference Type and configure Reference using the [AudioReference](#audioreference) table above.
 5. With Play On Awake enabled, playback starts whenever the component becomes enabled in Play Mode.
 
 ![AudioPlayer](docs/images/audioplayer.png)
-
-| Reference Type | Configuration and behavior |
-|---|---|
-| Engine Audio Reference | Enter the Key of an Audio entry registered with the selected Engine as text |
-| Direct Audio Reference | Assign an AudioClip directly |
-| Resources Audio Reference | Select a library inside a Resources folder and an Audio entry. Unloaded libraries load automatically when playback starts |
-| Addressables Audio Reference | Select an Addressable library and an Audio entry. Unloaded libraries load automatically when playback starts |
 
 For Engine Audio Reference, register the library through the OrbitContext Engine settings or code before playback. The Inspector accepts arbitrary keys; lookup happens when playback starts.
 

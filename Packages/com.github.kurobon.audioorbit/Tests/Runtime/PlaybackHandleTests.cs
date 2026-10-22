@@ -21,7 +21,7 @@ namespace AudioOrbit.Tests
             library = ScriptableObject.CreateInstance<AudioLibrary>();
             var sound = new AudioDefinition { Key = "reusable", Loop = true };
             sound.Clips.Add(new ClipDefinition { Clip = clip }); library.Entries.Add(sound);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
         }
         [TearDown] public void Cleanup()
         {
@@ -48,7 +48,7 @@ namespace AudioOrbit.Tests
             var definition = new AudioDefinition { Key = reference.Key, Loop = true };
             definition.Clips.Add(new ClipDefinition { Clip = clip });
             pendingLibrary.Entries.Add(definition);
-            engine.RegisterLibrary(pendingLibrary);
+            engine.Preload(pendingLibrary);
             playback.Play();
             Assert.True(playback.Started);
             Assert.AreEqual(reference.Key, playback.Key);
@@ -110,13 +110,90 @@ namespace AudioOrbit.Tests
             {
                 var source = go.AddComponent<AudioSource>(); source.playOnAwake = false;
                 source.clip = clip; source.loop = true; source.volume = .4f;
-                using var registration = engine.RegisterExternalSource(source);
-                using var playback = engine.CreatePlayback(registration);
+                using var playback = engine.CreatePlayback(source);
                 var first = playback.StartRunForTest(); Assert.True(first.Started); playback.Stop();
                 var second = playback.StartRunForTest(); Assert.True(second.Started);
                 first.Stop(); Assert.False(second.IsCompleted);
                 playback.Dispose(); Assert.True(second.IsCompleted);
-                registration.Dispose(); Assert.AreSame(clip, source.clip); Assert.AreEqual(.4f, source.volume);
+                Assert.AreSame(clip, source.clip); Assert.AreEqual(.4f, source.volume);
+            }
+            finally { UnityEngine.Object.DestroyImmediate(go); }
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void ExternalSourceHasOneOwnerUntilHandleDisposal(bool playing)
+        {
+            var go = new GameObject("external ownership");
+            try
+            {
+                var source = go.AddComponent<AudioSource>(); source.playOnAwake = false; source.clip = clip;
+                using var first = engine.CreatePlayback(source);
+                if (playing) first.Play();
+                Assert.Throws<ArgumentException>(() => engine.CreatePlayback(source));
+                using var other = new AudioEngine(settings);
+                Assert.Throws<ArgumentException>(() => other.CreatePlayback(source));
+                first.Dispose();
+                using var next = other.CreatePlayback(source);
+                next.Play(); Assert.True(next.Started);
+            }
+            finally { UnityEngine.Object.DestroyImmediate(go); }
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void ExternalHandleDisposalRestoresOriginalSettings(bool playing)
+        {
+            var go = new GameObject("external restore");
+            try
+            {
+                var source = go.AddComponent<AudioSource>(); source.playOnAwake = false;
+                source.clip = clip; source.volume = .4f; source.pitch = 1.25f; source.loop = true;
+                using var playback = engine.CreatePlayback(source);
+                if (playing) playback.Play();
+                source.volume = .8f; source.pitch = .75f; source.loop = false; source.spatialBlend = 1;
+                playback.Dispose(); playback.Dispose();
+                Assert.True(playback.IsCompleted); Assert.False(source.isPlaying);
+                Assert.AreSame(clip, source.clip); Assert.AreEqual(.4f, source.volume);
+                Assert.AreEqual(1.25f, source.pitch); Assert.True(source.loop); Assert.AreEqual(0, source.spatialBlend);
+            }
+            finally { UnityEngine.Object.DestroyImmediate(go); }
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void EngineDisposalRestoresExternalSourceWithoutDisposingTheHandle(bool playing)
+        {
+            var go = new GameObject("external engine dispose");
+            try
+            {
+                var source = go.AddComponent<AudioSource>(); source.playOnAwake = false;
+                source.clip = clip; source.volume = .4f;
+                using var playback = engine.CreatePlayback(source);
+                if (playing) playback.Play();
+                source.volume = .8f;
+                engine.Dispose();
+                Assert.False(source.isPlaying); Assert.AreEqual(.4f, source.volume); Assert.AreSame(clip, source.clip);
+                using var other = new AudioEngine(settings);
+                using var next = other.CreatePlayback(source);
+                next.Play(); Assert.True(next.Started);
+                playback.Dispose(); Assert.False(next.IsCompleted);
+            }
+            finally { UnityEngine.Object.DestroyImmediate(go); }
+        }
+
+        [Test] public void ExternalSourceValidationDoesNotRetainOwnershipOnFailure()
+        {
+            var go = new GameObject("external validation");
+            try
+            {
+                var source = go.AddComponent<AudioSource>();
+                Assert.Throws<ArgumentException>(() => engine.CreatePlayback(source));
+                source.playOnAwake = false;
+                Assert.Throws<ArgumentException>(() => engine.CreatePlayback(source));
+                source.clip = clip;
+                using var playback = engine.CreatePlayback(source);
+                playback.Play(); Assert.True(playback.Started);
             }
             finally { UnityEngine.Object.DestroyImmediate(go); }
         }

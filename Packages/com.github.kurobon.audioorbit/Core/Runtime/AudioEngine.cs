@@ -131,7 +131,7 @@ namespace AudioOrbit
             return id;
         }
 
-        public LibraryHandle RegisterLibrary(AudioLibrary library)
+        private LibraryHandle RegisterLibrary(AudioLibrary library)
         {
             Check();
             if (library == null) throw new ArgumentNullException(nameof(library));
@@ -207,7 +207,7 @@ namespace AudioOrbit
                 throw new ArgumentException("Library belongs to another engine.");
         }
 
-        public void UnregisterLibrary(LibraryHandle library)
+        private void UnregisterLibrary(LibraryHandle library)
         {
             Check();
             ValidateLibrary(library);
@@ -310,6 +310,7 @@ namespace AudioOrbit
             for (var i = playbacks.Count - 1; i >= 0; i--) End(playbacks[i], PlaybackEndReason.EngineDisposed);
             foreach (var session in new List<LibrarySession>(librarySessions.Values)) ReleaseLibrarySession(session);
             libraryLoads.Clear();
+            directLibraryLoaders.Clear();
             referenceLoads.Clear();
             referencedLibraries.Clear();
             librarySelections.Clear();

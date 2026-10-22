@@ -17,7 +17,7 @@ namespace AudioOrbit.Tests
         private AudioClip clip;
         private string id = "sound";
         private AudioCategory category;
-        private LibraryHandle library;
+        private AudioLibrary library;
         private AudioDefinition sound;
         private AudioEngineSettings settings;
         private Task<PlaybackTestStart> Start(string soundId, PlayOptions options = default) =>
@@ -49,7 +49,7 @@ namespace AudioOrbit.Tests
             typeof(AudioLibrary).GetField("definitions", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(lib, new List<AudioDefinition> { sound });
             engine = new AudioEngine(settings);
-            library = engine.RegisterLibrary(lib);
+            library = lib; engine.Preload(lib);
         }
 
         [TearDown]
@@ -72,7 +72,7 @@ namespace AudioOrbit.Tests
             sound.Clips.Clear();
             sound.Clips.Add(new ClipDefinition { Clip = clip });
             lib.Entries.Add(sound);
-            library = engine.RegisterLibrary(lib);
+            library = lib; engine.Preload(lib);
             sound.Clips[0].Clip = null;
             var synchronous = engine.CreatePlayback(id).StartForTest();
             Assert.True(synchronous.Started);
@@ -80,11 +80,11 @@ namespace AudioOrbit.Tests
             {
                 var asynchronous = await Start(id);
                 Assert.True(asynchronous.Started);
-                engine.UnregisterLibrary(library);
+                engine.ReleaseLibrary(library);
                 Assert.AreEqual(PlaybackState.Playing, asynchronous.Handle.State);
+                asynchronous.Handle.Stop();
                 LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Unknown Audio key: " + System.Text.RegularExpressions.Regex.Escape(id)));
                 Assert.AreEqual(PlayRejectionReason.Failed, engine.CreatePlayback(id).StartForTest().RejectionReason);
-                asynchronous.Handle.Stop();
             }
 
         }
@@ -124,7 +124,7 @@ namespace AudioOrbit.Tests
         [Test]
         public async Task LibraryPreloadAndPlaybackHaveIndependentLifetimes()
         {
-            engine.UnregisterLibrary(library);
+            engine.ReleaseLibrary(library);
             var lib = Asset<AudioLibrary>();
             lib.Entries.Add(sound);
             var libraryLoader = new FixedLibraryLoader(lib);
@@ -246,14 +246,14 @@ namespace AudioOrbit.Tests
 
 
         [Test]
-        public async Task UnregisterDoesNotCutExistingPlayback()
+        public async Task ReleaseDoesNotCutExistingPlayback()
         {
             var handle = (await Start(id)).Handle;
-            engine.UnregisterLibrary(library);
-            LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Unknown Audio key: " + System.Text.RegularExpressions.Regex.Escape(id)));
-            Assert.AreEqual(PlayRejectionReason.Failed, engine.CreatePlayback(id).StartForTest().RejectionReason);
+            engine.ReleaseLibrary(library);
             Assert.AreEqual(PlaybackState.Playing, handle.State);
             handle.Stop();
+            LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Unknown Audio key: " + System.Text.RegularExpressions.Regex.Escape(id)));
+            Assert.AreEqual(PlayRejectionReason.Failed, engine.CreatePlayback(id).StartForTest().RejectionReason);
         }
 
         [Test]
@@ -276,12 +276,12 @@ namespace AudioOrbit.Tests
             Assert.AreEqual(PlaybackEndReason.EngineDisposed, (await h.WaitForCompletionAsync()).EndReason);
         }
 
-        private ExternalSourceHandle ExternalForKeyTest(string key, PlaybackLimitSettings limits)
+        private PlaybackHandle ExternalForKeyTest(string key, PlaybackLimitSettings limits)
         {
             var go = new GameObject("external key test"); objects.Add(go);
             var source = go.AddComponent<AudioSource>();
             source.playOnAwake = false; source.clip = clip; source.loop = true;
-            return engine.RegisterExternalSource(source, new ExternalSourceOptions
+            return engine.CreatePlayback(source, new ExternalSourceOptions
                 { Key = key, Category = category, Owner = category, Limits = limits });
         }
 
@@ -294,8 +294,8 @@ namespace AudioOrbit.Tests
             var limits = new PlaybackLimitSettings { MaxPlaybacks = 1, MaxPlaybacksPerOwner = 1 };
             using var first = ExternalForKeyTest(key, limits);
             using var second = ExternalForKeyTest(key, limits);
-            var a = engine.CreatePlayback(first).StartForTest();
-            var b = engine.CreatePlayback(second).StartForTest();
+            var a = first.StartForTest();
+            var b = second.StartForTest();
             Assert.True(a.Started);
             Assert.AreEqual(string.IsNullOrWhiteSpace(key), b.Started);
             if (!b.Started) Assert.AreEqual(PlayRejectionReason.PlaybackLimit, b.RejectionReason);
@@ -310,10 +310,10 @@ namespace AudioOrbit.Tests
             var limits = new PlaybackLimitSettings { CooldownSeconds = 60, OwnerCooldownSeconds = 60 };
             using var first = ExternalForKeyTest(key, limits);
             using var second = ExternalForKeyTest(key, limits);
-            var a = engine.CreatePlayback(first).StartForTest(); Assert.True(a.Started); await a.StopAsync();
-            var repeated = engine.CreatePlayback(first).StartForTest();
+            var a = first.StartForTest(); Assert.True(a.Started); await a.StopAsync();
+            var repeated = first.StartForTest();
             Assert.AreEqual(PlayRejectionReason.Cooldown, repeated.RejectionReason);
-            var b = engine.CreatePlayback(second).StartForTest();
+            var b = second.StartForTest();
             Assert.AreEqual(!shared, b.Started);
             if (!b.Started) Assert.AreEqual(PlayRejectionReason.Cooldown, b.RejectionReason);
             await b.StopAsync();
@@ -330,22 +330,21 @@ namespace AudioOrbit.Tests
             source.volume = 0.4f;
             source.pitch = 1.25f;
             source.loop = true;
-            var registration = engine.RegisterExternalSource(source, new ExternalSourceOptions
+            using var playback = engine.CreatePlayback(source, new ExternalSourceOptions
             {
-                Key = "ext",
-                Category = category, RepeatBehavior = ExternalRepeatBehavior.Restart
+                Key = "ext", Category = category
             });
-            var old = engine.CreatePlayback(registration).StartForTest();
+            var old = playback.StartRunForTest();
             Assert.True(old.Started);
             Assert.AreEqual(0.4f, source.volume, 0.001f);
             Assert.AreEqual(1.25f, source.pitch, 0.001f);
             Assert.True(source.loop);
-            var next = engine.CreatePlayback(registration).StartForTest();
-            Assert.True(next.Started, next.ObserveStartAsync().Result.Error?.ToString());
+            var next = playback.StartRunForTest();
+            Assert.True(next.Started);
             Assert.AreEqual(PlaybackEndReason.Stopped, (await old.WaitForCompletionAsync()).EndReason);
             old.Stop(); Assert.True(old.IsCompleted);
             Assert.False(next.SetPosition(Vector3.one));
-            registration.Dispose();
+            playback.Dispose();
             Assert.AreEqual(0.4f, source.volume, 0.001f);
             Assert.AreEqual(clip, source.clip);
         }
@@ -507,7 +506,7 @@ namespace AudioOrbit.Tests
             var lib = Asset<AudioLibrary>();
             typeof(AudioLibrary).GetField("definitions", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(lib, new List<AudioDefinition> { sound });
-            library = engine.RegisterLibrary(lib);
+            library = lib; engine.Preload(lib);
             var otherCategory = Asset<AudioCategory>();
             otherCategory.Id = new AudioCategoryId("other");
             var otherSound = new AudioDefinition();
@@ -518,7 +517,7 @@ namespace AudioOrbit.Tests
             var otherLib = Asset<AudioLibrary>();
             typeof(AudioLibrary).GetField("definitions", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(otherLib, new List<AudioDefinition> { otherSound });
-            engine.RegisterLibrary(otherLib);
+            engine.Preload(otherLib);
             var oldest = (await Start(otherSound.Key)).Handle;
             var existing = (await Start(id)).Handle;
             var rejected = await Start(id);
@@ -545,7 +544,7 @@ namespace AudioOrbit.Tests
             typeof(AudioLibrary).GetField("definitions", BindingFlags.NonPublic | BindingFlags.Instance)
                 .SetValue(lib, new List<AudioDefinition> { sound });
             engine = new AudioEngine(settings);
-            library = engine.RegisterLibrary(lib);
+            library = lib; engine.Preload(lib);
             var seen = new HashSet<int>();
             int previous = -1;
             for (int i = 0; i < 9; i++)
@@ -585,7 +584,7 @@ namespace AudioOrbit.Tests
             sound.Clips.Add(new ClipDefinition { Clip = clip, Volume = 0.2f, Weight = 0 });
             sound.Clips.Add(new ClipDefinition { Clip = clip, Volume = 0.3f, Weight = 10 });
             var lib = Asset<AudioLibrary>(); lib.Entries.Add(sound);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(lib);
+            engine = new AudioEngine(settings); engine.Preload(lib);
             async Task Verify(float volume, PlayOptions options = default)
             {
                 var playback = await Start(id, options);
@@ -603,11 +602,11 @@ namespace AudioOrbit.Tests
 
         [Test] public void ShuffleCyclesExcludeZeroWeightClipsAndExplicitSelectionDoesNotConsumeACycle()
         {
-            engine.UnregisterLibrary(library);
+            engine.ReleaseLibrary(library);
             sound.SelectionMode = ClipSelectionMode.Shuffle;
             sound.Clips.Clear();
             for (var i = 0; i < 4; i++) sound.Clips.Add(new ClipDefinition { Clip = clip, Weight = i == 1 ? 0 : 1 });
-            var lib = Asset<AudioLibrary>(); lib.Entries.Add(sound); library = engine.RegisterLibrary(lib);
+            var lib = Asset<AudioLibrary>(); lib.Entries.Add(sound); library = lib; engine.Preload(lib);
             using var playback = engine.CreatePlayback(id);
             for (var cycle = 0; cycle < 4; cycle++)
             {
@@ -631,9 +630,9 @@ namespace AudioOrbit.Tests
         [TestCase(ClipSelectionMode.AvoidImmediateRepeat)]
         public void SelectedClipIndexMatchesThePlayedSettingsForSharedAudioClips(ClipSelectionMode mode)
         {
-            engine.UnregisterLibrary(library); sound.SelectionMode = mode; sound.Clips.Clear();
+            engine.ReleaseLibrary(library); sound.SelectionMode = mode; sound.Clips.Clear();
             for (var i = 0; i < 16; i++) sound.Clips.Add(new ClipDefinition { Clip = clip, Volume = (i + 1) / 20f });
-            var lib = Asset<AudioLibrary>(); lib.Entries.Add(sound); library = engine.RegisterLibrary(lib);
+            var lib = Asset<AudioLibrary>(); lib.Entries.Add(sound); library = lib; engine.Preload(lib);
             using var playback = engine.CreatePlayback(id);
             for (var i = 0; i < 40; i++)
             {

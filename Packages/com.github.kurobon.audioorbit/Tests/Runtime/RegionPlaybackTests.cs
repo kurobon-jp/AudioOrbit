@@ -33,7 +33,7 @@ namespace AudioOrbit.Tests
             region.Clip = clip; region.ReferenceSampleRate = clip.frequency; region.LoopStartFrame = 4800; region.LoopEndFrameExclusive = 14400;
             library.Entries.Add(new AudioDefinition { Key = id, Loop = true,
                 Clips = new List<ClipDefinition> { new() { Generator = new IAudioGenerator.Serializable(region) } } });
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
         }
         [TearDown] public void Cleanup()
         {
@@ -75,7 +75,7 @@ namespace AudioOrbit.Tests
             engine.Dispose();
             library.Entries[0].Clips[0].Generator = new IAudioGenerator.Serializable(clip);
             var settings = ScriptableObject.CreateInstance<AudioEngineSettings>(); objects.Add(settings);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
             var playback = engine.CreatePlayback(id).StartForTest(new PlayOptions { Loop = false });
             Assert.True(playback.Started, playback.ObserveStartAsync().Result.Error?.ToString());
             Assert.AreEqual(0, CachedPcmCount);
@@ -193,7 +193,7 @@ namespace AudioOrbit.Tests
             region.LoopStartFrame = 4410;
             region.LoopEndFrameExclusive = 13230;
             var settings = ScriptableObject.CreateInstance<AudioEngineSettings>(); objects.Add(settings);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
             var playback = engine.CreatePlayback(id).StartForTest(new PlayOptions { Loop = false, Pitch = 2 });
             Assert.True(playback.Started, playback.ObserveStartAsync().Result.Error?.ToString());
             yield return Until(() => playback.IsCompleted);
@@ -223,7 +223,7 @@ namespace AudioOrbit.Tests
         {
             engine.Dispose(); region.LoopEndFrameExclusive = clip.samples + 1;
             var settings = ScriptableObject.CreateInstance<AudioEngineSettings>(); objects.Add(settings);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
             LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Loop region must satisfy"));
             var playback = engine.CreatePlayback(id).StartForTest();
             Assert.True(playback.IsCompleted); Assert.False(playback.Started);

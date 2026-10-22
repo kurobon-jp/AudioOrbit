@@ -275,6 +275,7 @@ namespace AudioOrbit
             stateChanged = null;
             listeners = null;
             Request?.Stop();
+            external?.Dispose();
             reference = null;
             external = null;
             ReusablePlayback.Handle = null;

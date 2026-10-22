@@ -73,6 +73,58 @@ namespace AudioOrbit.Tests
         private TestAudioReference Reference(string identity = "test/library") =>
             new TestAudioReference { LibraryIdentity = identity, Key = sound.Key, Factory = () => loader };
 
+        [Test] public async Task DirectLibraryPreloadIsIdempotentAndReleaseRemovesItsKeys()
+        {
+            engine.Preload(library);
+            engine.Preload(library);
+            using var playback = engine.CreatePlayback(sound.Key);
+            playback.Play(); Assert.True(playback.Started); playback.Stop();
+            engine.ReleaseLibrary(library);
+            engine.ReleaseLibrary(library);
+            LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Unknown Audio key: " + sound.Key));
+            playback.Play();
+            Assert.IsInstanceOf<KeyNotFoundException>((await playback.WaitForCompletionAsync()).Error);
+            engine.Preload(library);
+            playback.Play(); Assert.True(playback.Started);
+        }
+
+        [Test] public void DirectLibraryPreloadFailureCanBeCorrectedAndRetried()
+        {
+            engine.Preload(library);
+            var conflicting = Asset<AudioLibrary>();
+            var entry = new AudioDefinition { Key = sound.Key, Loop = true,
+                Clips = new List<ClipDefinition> { sound.Clips[0] } };
+            conflicting.Entries.Add(entry);
+            Assert.Throws<ArgumentException>(() => engine.Preload(conflicting));
+            entry.Key = "corrected";
+            engine.Preload(conflicting);
+            using var original = engine.CreatePlayback(sound.Key);
+            using var corrected = engine.CreatePlayback(entry.Key);
+            original.Play(); corrected.Play();
+            Assert.True(original.Started); Assert.True(corrected.Started);
+            original.Stop(); corrected.Stop();
+            engine.ReleaseLibrary(conflicting);
+            original.Play(); Assert.True(original.Started);
+        }
+
+        [Test] public async Task DirectAndLoaderCachesShareLibraryAndRetainActivePlayback()
+        {
+            engine.Preload(library);
+            await engine.PreloadAsync(loader);
+            engine.ReleaseLibrary(library);
+            using var playback = engine.CreatePlayback(sound.Key);
+            playback.Play(); Assert.True(playback.Started);
+            engine.ReleaseLibrary(loader);
+            Assert.False(playback.IsCompleted);
+            Assert.AreEqual(1, loader.Active);
+            engine.StopLibrary(library);
+            Assert.True(playback.IsCompleted);
+            Assert.AreEqual(0, loader.Active);
+            LogAssert.Expect(LogType.Exception, new System.Text.RegularExpressions.Regex("Unknown Audio key: " + sound.Key));
+            playback.Play();
+            Assert.IsInstanceOf<KeyNotFoundException>((await playback.WaitForCompletionAsync()).Error);
+        }
+
         [Test] public async Task MissingKeyResultIsIndependentOfLibraryLoadHistory()
         {
             using var playback = engine.CreatePlayback(sound.Key);

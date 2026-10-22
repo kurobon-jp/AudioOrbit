@@ -84,7 +84,7 @@ public sealed class AudioExample : MonoBehaviour
     private void Awake()
     {
         engine = new AudioEngine(settings);
-        engine.RegisterLibrary(library);
+        engine.Preload(library);
         attack = engine.CreatePlayback("attack");
         attack.StateChanged += (_, state) => Debug.Log(state);
     }
@@ -140,7 +140,20 @@ public void StopAttack() => playback.Stop(fadeSeconds: 0.2f);
 
 ### Engineの一括停止
 
-EngineにはStopAll・StopCategory・StopOwner・StopLibraryと、それぞれのAsync版があります。フェードには非スケール時間を使います。
+EngineにはStopAll・StopCategory・StopOwner・StopLibraryと、それぞれのAsync版があります。StopLibraryには対象のAudioLibraryを渡します。フェードには非スケール時間を使います。
+
+### ロード済みAudioLibrary
+
+```csharp
+engine.Preload(library);
+var playback = engine.CreatePlayback("attack");
+playback.Play();
+
+// Libraryが不要になったらEngineのキャッシュを解放します。
+engine.ReleaseLibrary(library);
+```
+
+`Preload(AudioLibrary)`はロード済みのアセットを同期的に登録します。同じアセットを繰り返し渡してもKeyを重複登録しません。Loader・Library参照と同じキャッシュ管理を使用します。`ReleaseLibrary`はEngineのキャッシュ保持を解放し、再生中のLibraryは終了まで保持します。利用者が渡したアセット自体をEngineが破棄することはありません。
 
 ## AudioLibraryLoader
 
@@ -182,15 +195,39 @@ playback.Play();
 `IAudioLibraryReference`はロードするLibraryの所在を表します。Resources版はパス、Addressables版はAssetReferenceを保持します。
 
 ```csharp
-var libraryReference = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" };
-await engine.PreloadAsync(libraryReference, token);
-// Libraryのキャッシュが不要になったとき
-engine.ReleaseLibrary(libraryReference);
+[SerializeReference] private IAudioLibraryReference library;
+
+await engine.PreloadAsync(library, token);
+var playback = engine.CreatePlayback("bgm");
+playback.Play();
 ```
+
+![LibraryReference](docs/images/library_reference.png)
+
+| Reference Type | 設定と動作 |
+|---|---|
+| Resources Library Reference | Resourcesフォルダ内のLibraryを選択します。 |
+| Addressables Library Reference | Addressable登録済みのLibraryを選択します。 |
 
 ## AudioReference
 
 `IAudioReference`は再生対象を保持する参照です。Libraryのロード情報とAudioのKeyをまとめたResources／Addressables参照なら、`engine.CreatePlayback(reference)`から`Play()`するだけで、未ロードのLibraryも自動ロードします。ResourcesAudioReference／AddressablesAudioReferenceは`IAudioReference`を実装し、Library参照とAudioのKeyを保持します。Library参照が作成したLoaderはEngineが管理します。
+
+```csharp
+[SerializeReference] private IAudioReference bgmReference;
+
+var playback = engine.CreatePlayback(bgmReference);
+playback.Play();
+```
+
+![AudioReference](docs/images/audio_reference.png)
+
+| Reference Type | 設定と動作 |
+|---|---|
+| Resources Audio Reference | Resourcesフォルダ内のLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
+| Addressables Audio Reference | Addressable登録済みのLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
+| Engine Audio Reference | Keyをテキスト入力します。選択したEngineに登録済みのAudioのKeyを指定します。 |
+| Direct Audio Reference | AudioClipを直接設定します。 |
 
 Engine Audio Referenceは登録済みKey、Direct Audio ReferenceはClipを直接参照するため、Libraryの自動ロードは行いません。
 
@@ -208,17 +245,6 @@ Engine Audio Referenceは登録済みKey、Direct Audio ReferenceはClipを直�
 
 `ResourcesAudioReference`は、`ResourcesLibraryReference`型のLibraryとAudioのKeyを保持します。Resources相対パスはLibrary側に設定します。Inspectorでは、Library、Audio候補、Library Managerを開くボタンを表示します。
 
-```csharp
-private ResourcesAudioReference reference = new ResourcesAudioReference
-{
-    Library = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" },
-    Key = "voice_attack"
-};
-
-// 最初の例のAwakeで、RegisterLibraryとCreatePlayback("attack")の代わりに使用。
-attack = engine.CreatePlayback(reference);
-```
-
 Libraryは、例えば`Assets/Game/Resources/Audio/VoiceLibrary.asset`に配置します。`PlayAttack()`と破棄処理は最初の例と同じです。
 
 `[SerializeReference] private IAudioLibraryReference library;`ではLibraryだけを設定します。ResourcesLibraryReference／AddressablesLibraryReferenceを選べ、Audioの選択欄はありません。再生対象を設定する場合は`IAudioReference`を使用します。配列にも対応します。
@@ -234,7 +260,6 @@ using AudioOrbit.Addressables;
 
 [SerializeField] private AddressablesAudioReference attackReference;
 
-// 最初の例のAwakeで、RegisterLibraryとCreatePlayback("attack")の代わりに使用。
 attack = engine.CreatePlayback(attackReference);
 ```
 
@@ -446,12 +471,13 @@ public void PlayOutro() => bgm.Loop = false;
 ## 外部AudioSource
 
 ```csharp
-var source = engine.RegisterExternalSource(audioSource);
-var playback = engine.CreatePlayback(source);
+using var playback = engine.CreatePlayback(audioSource);
 playback.Play();
 ```
 
-AudioSourceに設定されたClipを再生できます。登録中はAudioOrbitが制御するため、`playOnAwake`は無効にしてください。`ExternalSourceOptions.Key`は任意です。未指定なら、登録ごとに制限を管理します。Keyを指定すると、同じKeyの再生と制限・クールダウンを共有します。
+AudioSourceに設定されたClipを再生できます。Handleの保持中はAudioOrbitが制御するため、`playOnAwake`は無効にしてください。`ExternalSourceOptions.Key`は任意です。未指定なら、Handleごとに制限を管理します。Keyを指定すると、同じKeyの再生と制限・クールダウンを共有します。
+
+設定が必要なら`CreatePlayback(audioSource, externalSourceOptions)`へ渡します。同じAudioSourceから複数のHandleを作成することはできません。Handleは繰り返し再生でき、`Dispose()`で停止・元のAudioSource設定の復元・管理解除を行います。Engineの`Dispose()`でも元の設定に復元します。
 
 ## OrbitContext
 
@@ -464,7 +490,7 @@ OrbitContextは、複数のコンポーネントから共有するAudioEngineの
 | 設定 | 内容 |
 |---|---|
 | Key | Engineを識別する文字列。既定値は`Default`。AudioのKeyとは別の識別子です |
-| Settings | そのEngineに使用するAudioEngineSettings |
+| Settings | Engineに使用するAudioEngineSettings |
 | Libraries | Engine生成時に直接登録するAudioLibrary。Resources／Addressables参照だけを使う場合などは省略できます |
 
 `Get`は初回アクセス時にEngineを作成し、Librariesを登録します。`TryGet(key, out engine)`は作成済みのEngineだけを取得し、新しく生成しません。共有Engineの破棄はContextが担当するため、利用する各コンポーネントからEngineを`Dispose()`しないでください。各コンポーネントが作成したPlaybackHandleは、そのコンポーネントで管理します。
@@ -500,17 +526,10 @@ OrbitContextは任意です。Engineを自分で所有する場合は、最初�
 1. `Create > AudioOrbit > Orbit Context`でContext ScriptableObjectを作成し、InspectorのAssignボタンでPreloaded Assetsへ登録します。Contextは1つだけ登録してください。
 2. ContextのEnginesに、Key・Settings・Librariesを設定します。Librariesは任意です。
 3. 再生対象にAudioPlayerを追加し、Engineを選択します。既定値は`Default`です。同じKeyなら同じEngine、異なるKeyなら別のEngineを使用します。Keyは大文字・小文字を区別します。
-4. Reference Typeを選び、次の表に従ってReferenceを設定します。
+4. Reference Typeを選び、上記の[AudioReference](#audioreference)表に従ってReferenceを設定します。
 5. Play On Awakeが有効なら、Play Modeでコンポーネントが有効になるたびに自動再生します。
 
 ![AudioPlayer](docs/images/audioplayer.png)
-
-| Reference Type | 設定と動作 |
-|---|---|
-| Engine Audio Reference | Keyをテキスト入力します。選択したEngineに登録済みのAudioのKeyを指定します。 |
-| Direct Audio Reference | AudioClipを直接設定します。 |
-| Resources Audio Reference | Resourcesフォルダ内のLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
-| Addressables Audio Reference | Addressable登録済みのLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
 
 Engine Audio Referenceを使う場合は、OrbitContextのEngine設定またはコードから、再生前にLibraryを登録してください。InspectorではKeyの入力を制限せず、存在確認は再生時に行います。
 

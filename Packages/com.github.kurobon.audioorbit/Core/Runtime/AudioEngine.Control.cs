@@ -243,10 +243,12 @@ namespace AudioOrbit
             StopGroup(new StopFilter(StopScope.Category, category), fadeSeconds, false);
         public void StopOwner(Object owner, float fadeSeconds = 0) =>
             StopGroup(new StopFilter(StopScope.Owner, owner: owner), fadeSeconds, false);
-        public void StopLibrary(LibraryHandle library, float fadeSeconds = 0)
+        public void StopLibrary(AudioLibrary library, float fadeSeconds = 0)
         {
-            Check(); ValidateLibrary(library);
-            StopGroup(new StopFilter(StopScope.Library, library: library), fadeSeconds, false);
+            Check(); ValidateNonNegative(fadeSeconds, nameof(fadeSeconds));
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            if (sharedLibraries.TryGetValue(library, out var shared))
+                StopGroup(new StopFilter(StopScope.Library, library: shared.Handle), fadeSeconds, false);
         }
         /// <summary>Stops current requests and playbacks. Cancellation cancels only waiting.</summary>
         public Task StopAllAsync(float fadeSeconds = 0, CancellationToken cancellationToken = default) =>
@@ -255,10 +257,13 @@ namespace AudioOrbit
             StopGroup(new StopFilter(StopScope.Category, category), fadeSeconds, true, cancellationToken);
         public Task StopOwnerAsync(Object owner, float fadeSeconds = 0, CancellationToken cancellationToken = default) =>
             StopGroup(new StopFilter(StopScope.Owner, owner: owner), fadeSeconds, true, cancellationToken);
-        public Task StopLibraryAsync(LibraryHandle library, float fadeSeconds = 0, CancellationToken cancellationToken = default)
+        public Task StopLibraryAsync(AudioLibrary library, float fadeSeconds = 0, CancellationToken cancellationToken = default)
         {
-            Check(); ValidateLibrary(library);
-            return StopGroup(new StopFilter(StopScope.Library, library: library), fadeSeconds, true, cancellationToken);
+            Check(); ValidateNonNegative(fadeSeconds, nameof(fadeSeconds));
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            return sharedLibraries.TryGetValue(library, out var shared)
+                ? StopGroup(new StopFilter(StopScope.Library, library: shared.Handle), fadeSeconds, true, cancellationToken)
+                : Task.CompletedTask;
         }
         public void SetMasterVolume(float volume)
         {
@@ -312,14 +317,23 @@ namespace AudioOrbit
                     v.Paused, AudioListener.pause && !v.Source.ignoreListenerPause, v.Source.ignoreListenerPause));
         }
 
-        public ExternalSourceHandle RegisterExternalSource(AudioSource source, ExternalSourceOptions options = default)
+        private static readonly List<WeakReference<ExternalSourceHandle>> externalSources = new();
+
+        private ExternalSourceHandle RegisterExternalSource(AudioSource source, ExternalSourceOptions options = default)
         {
             Check();
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (string.IsNullOrWhiteSpace(options.Key)) options.Key = string.Empty;
-            foreach (var h in external)
-                if (h.Source == source)
-                    throw new ArgumentException("Source is already registered.");
+            for (var i = externalSources.Count - 1; i >= 0; i--)
+            {
+                if (!externalSources[i].TryGetTarget(out var registered) || registered.Source == null)
+                {
+                    externalSources.RemoveAt(i);
+                    continue;
+                }
+                if (registered.Source == source)
+                    throw new ArgumentException("AudioSource is already managed by a PlaybackHandle.", nameof(source));
+            }
             if (source.playOnAwake) throw new ArgumentException("External source must disable playOnAwake.");
             if (source.clip == null) throw new ArgumentException("External source has no clip.");
             options.Limits = CopyLimits(options.Limits);
@@ -328,6 +342,7 @@ namespace AudioOrbit
             var handle = new ExternalSourceHandle(this, source, options);
             source.Stop();
             external.Add(handle);
+            externalSources.Add(new WeakReference<ExternalSourceHandle>(handle));
             return handle;
         }
 
@@ -360,6 +375,9 @@ namespace AudioOrbit
                 if (playbacks[i].External == h)
                     End(playbacks[i], PlaybackEndReason.Stopped);
             h.Snapshot.Restore(h.Source);
+            for (var i = externalSources.Count - 1; i >= 0; i--)
+                if (!externalSources[i].TryGetTarget(out var registered) || registered == h)
+                    externalSources.RemoveAt(i);
             external.Remove(h);
             if (string.IsNullOrEmpty(h.Options.Key))
             {

@@ -103,7 +103,7 @@ namespace AudioOrbit.Tests.Editor
                 var root = ((PropertyDrawer)Activator.CreateInstance(drawerType)).CreatePropertyGUI(property);
                 window.rootVisualElement.Add(root); root.Bind(data); window.Show(); await Task.Delay(100);
                 var field = root.Query<ObjectField>().Where(f => f.label == "Library").First();
-                var popup = root.Q<PopupField<string>>();
+                var popup = root.Query<PopupField<string>>().Where(f => f.label == "Audio").First();
                 var warning = root.Q<HelpBox>("addressable-library-validation");
                 string SelectedGuid() { data.Update(); return property.FindPropertyRelative("Library").FindPropertyRelative("Asset").FindPropertyRelative("m_AssetGUID").stringValue; }
                 field.value = library;
@@ -115,9 +115,16 @@ namespace AudioOrbit.Tests.Editor
                 Assert.AreEqual(guid, SelectedGuid()); Assert.True(popup.enabledSelf);
                 field.value = nested;
                 Assert.AreEqual(guid, SelectedGuid()); Assert.AreSame(library, field.value);
-                remove.Invoke(settings, new object[] { guid, true });
+                Assert.AreEqual(true, remove.Invoke(settings, new object[] { guid, true }), "The registered Library must be removed.");
+                Assert.Null(find.Invoke(settings, new object[] { guid, true }), "The removed Library must no longer be Addressable.");
+                var deadline = EditorApplication.timeSinceStartup + 3;
+                while (popup.enabledSelf && EditorApplication.timeSinceStartup < deadline)
+                    await Task.Delay(20);
                 Assert.False(popup.enabledSelf); Assert.AreEqual(DisplayStyle.Flex, warning.style.display.value);
                 create.Invoke(settings, new object[] { guid, group, false, true });
+                deadline = EditorApplication.timeSinceStartup + 3;
+                while (!popup.enabledSelf && EditorApplication.timeSinceStartup < deadline)
+                    await Task.Delay(20);
                 Assert.True(popup.enabledSelf);
                 field.value = null;
                 Assert.IsEmpty(SelectedGuid()); Assert.False(popup.enabledSelf);

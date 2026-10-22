@@ -32,7 +32,6 @@ namespace AudioOrbit
         public PlaybackLimitSettings Limits { get; set; }
         public int Priority { get; set; }
         public SpatialProfile DefaultProfile { get; set; }
-        public ExternalRepeatBehavior RepeatBehavior { get; set; }
     }
     public readonly struct PlaybackInfo
     {
