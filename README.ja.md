@@ -525,7 +525,7 @@ OrbitContextは任意です。Engineを自分で所有する場合は、最初�
 1. `Create > AudioOrbit > Orbit Context`でContext ScriptableObjectを作成し、InspectorのAssignボタンでPreloaded Assetsへ登録します。Contextは1つだけ登録してください。
 2. ContextのEnginesに、Key・Settings・Librariesを設定します。Librariesは任意です。
 3. 再生対象にAudioPlayerを追加し、Engineを選択します。既定値は`Default`です。同じKeyなら同じEngine、異なるKeyなら別のEngineを使用します。Keyは大文字・小文字を区別します。
-4. Reference Typeを選び、次の表に従ってReferenceを設定します。
+4. Reference Typeを選び、上記の[AudioReference](#AudioReference)表に従ってReferenceを設定します。
 5. Play On Awakeが有効なら、Play Modeでコンポーネントが有効になるたびに自動再生します。
 
 ![AudioPlayer](docs/images/audioplayer.png)

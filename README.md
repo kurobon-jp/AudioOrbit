@@ -525,7 +525,7 @@ OrbitContext is optional. To own an Engine yourself, create it with `new AudioEn
 1. Create a Context ScriptableObject through `Create > AudioOrbit > Orbit Context` and click Assign in its Inspector to register it in Preloaded Assets. Register only one Context.
 2. Add Engines with Key, Settings, and optional Libraries.
 3. Add AudioPlayer and select an Engine. The default is `Default`. Identical keys share an engine; different keys select independent engines. Keys are case-sensitive.
-4. Choose a Reference Type and configure Reference using the AudioReference table above.
+4. Choose a Reference Type and configure Reference using the [AudioReference](#AudioReference) table above.
 5. With Play On Awake enabled, playback starts whenever the component becomes enabled in Play Mode.
 
 ![AudioPlayer](docs/images/audioplayer.png)
