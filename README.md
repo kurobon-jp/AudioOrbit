@@ -203,6 +203,11 @@ playback.Play();
 
 ![LibraryReference](docs/images/library_reference.png)
 
+| Reference Type | Configuration and behavior |
+|---|---|
+| Resources Audio Reference | Select a library inside a Resources folder and an Audio entry.  |
+| Addressables Audio Reference | Select an Addressable library and an Audio entry.  |
+
 ## AudioReference
 
 `IAudioReference` identifies what to play. Resources and Addressables references combine library loading information with an Audio entry key. Create a handle with `engine.CreatePlayback(reference)` and call `Play()` to load an unloaded library automatically. ResourcesAudioReference and AddressablesAudioReference implement `IAudioReference` and hold a Library reference plus an Audio entry key. The engine manages loaders created by Library references.
@@ -215,6 +220,13 @@ playback.Play();
 ```
 
 ![AudioReference](docs/images/audio_reference.png)
+
+| Reference Type | Configuration and behavior |
+|---|---|
+| Resources Audio Reference | Select a library inside a Resources folder and an Audio entry. Unloaded libraries load automatically when playback starts |
+| Addressables Audio Reference | Select an Addressable library and an Audio entry. Unloaded libraries load automatically when playback starts |
+| Engine Audio Reference | Enter the Key of an Audio entry registered with the selected Engine as text |
+| Direct Audio Reference | Assign an AudioClip directly |
 
 Engine Audio Reference uses a registered key, while Direct Audio Reference points directly to a Clip; neither loads a library automatically.
 
@@ -517,13 +529,6 @@ OrbitContext is optional. To own an Engine yourself, create it with `new AudioEn
 5. With Play On Awake enabled, playback starts whenever the component becomes enabled in Play Mode.
 
 ![AudioPlayer](docs/images/audioplayer.png)
-
-| Reference Type | Configuration and behavior |
-|---|---|
-| Engine Audio Reference | Enter the Key of an Audio entry registered with the selected Engine as text |
-| Direct Audio Reference | Assign an AudioClip directly |
-| Resources Audio Reference | Select a library inside a Resources folder and an Audio entry. Unloaded libraries load automatically when playback starts |
-| Addressables Audio Reference | Select an Addressable library and an Audio entry. Unloaded libraries load automatically when playback starts |
 
 For Engine Audio Reference, register the library through the OrbitContext Engine settings or code before playback. The Inspector accepts arbitrary keys; lookup happens when playback starts.
 

@@ -204,10 +204,14 @@ playback.Play();
 
 ![LibraryReference](docs/images/library_reference.png)
 
+| Reference Type | 設定と動作 |
+|---|---|
+| Resources Audio Reference | Resourcesフォルダ内のLibraryを選択します。 |
+| Addressables Audio Reference | Addressable登録済みのLibraryを選択します。 |
+
 ## AudioReference
 
 `IAudioReference`は再生対象を保持する参照です。Libraryのロード情報とAudioのKeyをまとめたResources／Addressables参照なら、`engine.CreatePlayback(reference)`から`Play()`するだけで、未ロードのLibraryも自動ロードします。ResourcesAudioReference／AddressablesAudioReferenceは`IAudioReference`を実装し、Library参照とAudioのKeyを保持します。Library参照が作成したLoaderはEngineが管理します。
-
 
 ```csharp
 [SerializeReference] private IAudioReference bgmReference;
@@ -217,6 +221,13 @@ playback.Play();
 ```
 
 ![AudioReference](docs/images/audio_reference.png)
+
+| Reference Type | 設定と動作 |
+|---|---|
+| Resources Audio Reference | Resourcesフォルダ内のLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
+| Addressables Audio Reference | Addressable登録済みのLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
+| Engine Audio Reference | Keyをテキスト入力します。選択したEngineに登録済みのAudioのKeyを指定します。 |
+| Direct Audio Reference | AudioClipを直接設定します。 |
 
 Engine Audio Referenceは登録済みKey、Direct Audio ReferenceはClipを直接参照するため、Libraryの自動ロードは行いません。
 
@@ -518,13 +529,6 @@ OrbitContextは任意です。Engineを自分で所有する場合は、最初�
 5. Play On Awakeが有効なら、Play Modeでコンポーネントが有効になるたびに自動再生します。
 
 ![AudioPlayer](docs/images/audioplayer.png)
-
-| Reference Type | 設定と動作 |
-|---|---|
-| Engine Audio Reference | Keyをテキスト入力します。選択したEngineに登録済みのAudioのKeyを指定します。 |
-| Direct Audio Reference | AudioClipを直接設定します。 |
-| Resources Audio Reference | Resourcesフォルダ内のLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
-| Addressables Audio Reference | Addressable登録済みのLibraryとAudioを選択します。未ロードのLibraryは再生時に自動ロードします。 |
 
 Engine Audio Referenceを使う場合は、OrbitContextのEngine設定またはコードから、再生前にLibraryを登録してください。InspectorではKeyの入力を制限せず、存在確認は再生時に行います。
 
