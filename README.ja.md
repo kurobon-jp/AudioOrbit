@@ -471,12 +471,13 @@ public void PlayOutro() => bgm.Loop = false;
 ## 外部AudioSource
 
 ```csharp
-var source = engine.RegisterExternalSource(audioSource);
-var playback = engine.CreatePlayback(source);
+using var playback = engine.CreatePlayback(audioSource);
 playback.Play();
 ```
 
-AudioSourceに設定されたClipを再生できます。登録中はAudioOrbitが制御するため、`playOnAwake`は無効にしてください。`ExternalSourceOptions.Key`は任意です。未指定なら、登録ごとに制限を管理します。Keyを指定すると、同じKeyの再生と制限・クールダウンを共有します。
+AudioSourceに設定されたClipを再生できます。Handleの保持中はAudioOrbitが制御するため、`playOnAwake`は無効にしてください。`ExternalSourceOptions.Key`は任意です。未指定なら、Handleごとに制限を管理します。Keyを指定すると、同じKeyの再生と制限・クールダウンを共有します。
+
+設定が必要なら`CreatePlayback(audioSource, externalSourceOptions)`へ渡します。同じAudioSourceから複数のHandleを作成することはできません。Handleは繰り返し再生でき、`Dispose()`で停止・元のAudioSource設定の復元・管理解除を行います。Engineの`Dispose()`でも元の設定に復元します。
 
 ## OrbitContext
 
@@ -489,7 +490,7 @@ OrbitContextは、複数のコンポーネントから共有するAudioEngineの
 | 設定 | 内容 |
 |---|---|
 | Key | Engineを識別する文字列。既定値は`Default`。AudioのKeyとは別の識別子です |
-| Settings | そのEngineに使用するAudioEngineSettings |
+| Settings | Engineに使用するAudioEngineSettings |
 | Libraries | Engine生成時に直接登録するAudioLibrary。Resources／Addressables参照だけを使う場合などは省略できます |
 
 `Get`は初回アクセス時にEngineを作成し、Librariesを登録します。`TryGet(key, out engine)`は作成済みのEngineだけを取得し、新しく生成しません。共有Engineの破棄はContextが担当するため、利用する各コンポーネントからEngineを`Dispose()`しないでください。各コンポーネントが作成したPlaybackHandleは、そのコンポーネントで管理します。

@@ -470,12 +470,13 @@ Region playback retains an additional decoded float PCM copy of the entire clip.
 ## External AudioSources
 
 ```csharp
-var source = engine.RegisterExternalSource(audioSource);
-var playback = engine.CreatePlayback(source);
+using var playback = engine.CreatePlayback(audioSource);
 playback.Play();
 ```
 
-This plays the Clip assigned to the AudioSource. AudioOrbit controls the source while registered, so disable `playOnAwake`. `ExternalSourceOptions.Key` is optional. Without a Key, limits are tracked per registration. An explicit Key shares limits and cooldowns with other playback using that Key.
+This plays the Clip assigned to the AudioSource. AudioOrbit controls the source for the lifetime of the handle, so disable `playOnAwake`. `ExternalSourceOptions.Key` is optional. Without a Key, limits are tracked per handle. An explicit Key shares limits and cooldowns with other playback using that Key.
+
+Pass settings through `CreatePlayback(audioSource, externalSourceOptions)` when needed. Only one handle can manage a given AudioSource. Reuse the handle for repeated playback. Disposing it stops playback, restores the original AudioSource settings, and releases control. Disposing the engine also restores the source.
 
 ## OrbitContext
 

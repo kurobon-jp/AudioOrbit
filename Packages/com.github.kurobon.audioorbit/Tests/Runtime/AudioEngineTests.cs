@@ -276,12 +276,12 @@ namespace AudioOrbit.Tests
             Assert.AreEqual(PlaybackEndReason.EngineDisposed, (await h.WaitForCompletionAsync()).EndReason);
         }
 
-        private ExternalSourceHandle ExternalForKeyTest(string key, PlaybackLimitSettings limits)
+        private PlaybackHandle ExternalForKeyTest(string key, PlaybackLimitSettings limits)
         {
             var go = new GameObject("external key test"); objects.Add(go);
             var source = go.AddComponent<AudioSource>();
             source.playOnAwake = false; source.clip = clip; source.loop = true;
-            return engine.RegisterExternalSource(source, new ExternalSourceOptions
+            return engine.CreatePlayback(source, new ExternalSourceOptions
                 { Key = key, Category = category, Owner = category, Limits = limits });
         }
 
@@ -294,8 +294,8 @@ namespace AudioOrbit.Tests
             var limits = new PlaybackLimitSettings { MaxPlaybacks = 1, MaxPlaybacksPerOwner = 1 };
             using var first = ExternalForKeyTest(key, limits);
             using var second = ExternalForKeyTest(key, limits);
-            var a = engine.CreatePlayback(first).StartForTest();
-            var b = engine.CreatePlayback(second).StartForTest();
+            var a = first.StartForTest();
+            var b = second.StartForTest();
             Assert.True(a.Started);
             Assert.AreEqual(string.IsNullOrWhiteSpace(key), b.Started);
             if (!b.Started) Assert.AreEqual(PlayRejectionReason.PlaybackLimit, b.RejectionReason);
@@ -310,10 +310,10 @@ namespace AudioOrbit.Tests
             var limits = new PlaybackLimitSettings { CooldownSeconds = 60, OwnerCooldownSeconds = 60 };
             using var first = ExternalForKeyTest(key, limits);
             using var second = ExternalForKeyTest(key, limits);
-            var a = engine.CreatePlayback(first).StartForTest(); Assert.True(a.Started); await a.StopAsync();
-            var repeated = engine.CreatePlayback(first).StartForTest();
+            var a = first.StartForTest(); Assert.True(a.Started); await a.StopAsync();
+            var repeated = first.StartForTest();
             Assert.AreEqual(PlayRejectionReason.Cooldown, repeated.RejectionReason);
-            var b = engine.CreatePlayback(second).StartForTest();
+            var b = second.StartForTest();
             Assert.AreEqual(!shared, b.Started);
             if (!b.Started) Assert.AreEqual(PlayRejectionReason.Cooldown, b.RejectionReason);
             await b.StopAsync();
@@ -330,22 +330,21 @@ namespace AudioOrbit.Tests
             source.volume = 0.4f;
             source.pitch = 1.25f;
             source.loop = true;
-            var registration = engine.RegisterExternalSource(source, new ExternalSourceOptions
+            using var playback = engine.CreatePlayback(source, new ExternalSourceOptions
             {
-                Key = "ext",
-                Category = category, RepeatBehavior = ExternalRepeatBehavior.Restart
+                Key = "ext", Category = category
             });
-            var old = engine.CreatePlayback(registration).StartForTest();
+            var old = playback.StartRunForTest();
             Assert.True(old.Started);
             Assert.AreEqual(0.4f, source.volume, 0.001f);
             Assert.AreEqual(1.25f, source.pitch, 0.001f);
             Assert.True(source.loop);
-            var next = engine.CreatePlayback(registration).StartForTest();
-            Assert.True(next.Started, next.ObserveStartAsync().Result.Error?.ToString());
+            var next = playback.StartRunForTest();
+            Assert.True(next.Started);
             Assert.AreEqual(PlaybackEndReason.Stopped, (await old.WaitForCompletionAsync()).EndReason);
             old.Stop(); Assert.True(old.IsCompleted);
             Assert.False(next.SetPosition(Vector3.one));
-            registration.Dispose();
+            playback.Dispose();
             Assert.AreEqual(0.4f, source.volume, 0.001f);
             Assert.AreEqual(clip, source.clip);
         }

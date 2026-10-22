@@ -73,12 +73,6 @@ namespace AudioOrbit
         Shuffle
     }
 
-    public enum ExternalRepeatBehavior
-    {
-        RejectNew,
-        Restart
-    }
-
     /// <summary>Only an explicit value overrides the definition, including zero and false.</summary>
     [Serializable]
     public struct OverrideValue<T>
@@ -166,7 +160,7 @@ namespace AudioOrbit
         }
     }
 
-    public sealed class ExternalSourceHandle : IDisposable
+    internal sealed class ExternalSourceHandle : IDisposable
     {
         internal readonly object LimitKey;
         internal AudioEngine Engine;

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace AudioOrbit
 {
@@ -21,12 +22,11 @@ namespace AudioOrbit
             return new PlaybackHandle(this, null, reference);
         }
 
-        public PlaybackHandle CreatePlayback(ExternalSourceHandle source)
+        /// <summary>Takes control of an external source until the handle or engine is disposed.</summary>
+        public PlaybackHandle CreatePlayback(AudioSource source, ExternalSourceOptions options = default)
         {
-            Check();
-            if (source == null) throw new ArgumentNullException(nameof(source));
-            if (source.Engine != this) throw new ArgumentException("Register the source with this engine.", nameof(source));
-            return new PlaybackHandle(this, null, null, source);
+            var externalSource = RegisterExternalSource(source, options);
+            return new PlaybackHandle(this, null, null, externalSource);
         }
 
         internal PlaybackRequest PlayReusable(PlaybackHandle owner, string key, IAudioReference reference, ExternalSourceHandle externalSource, PlayOptions options)

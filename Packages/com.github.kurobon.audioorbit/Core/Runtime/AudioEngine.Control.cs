@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -317,14 +318,15 @@ namespace AudioOrbit
                     v.Paused, AudioListener.pause && !v.Source.ignoreListenerPause, v.Source.ignoreListenerPause));
         }
 
-        public ExternalSourceHandle RegisterExternalSource(AudioSource source, ExternalSourceOptions options = default)
+        private static readonly ConditionalWeakTable<AudioSource, ExternalSourceHandle> externalSources = new();
+
+        private ExternalSourceHandle RegisterExternalSource(AudioSource source, ExternalSourceOptions options = default)
         {
             Check();
             if (source == null) throw new ArgumentNullException(nameof(source));
             if (string.IsNullOrWhiteSpace(options.Key)) options.Key = string.Empty;
-            foreach (var h in external)
-                if (h.Source == source)
-                    throw new ArgumentException("Source is already registered.");
+            if (externalSources.TryGetValue(source, out _))
+                throw new ArgumentException("AudioSource is already managed by a PlaybackHandle.", nameof(source));
             if (source.playOnAwake) throw new ArgumentException("External source must disable playOnAwake.");
             if (source.clip == null) throw new ArgumentException("External source has no clip.");
             options.Limits = CopyLimits(options.Limits);
@@ -333,6 +335,7 @@ namespace AudioOrbit
             var handle = new ExternalSourceHandle(this, source, options);
             source.Stop();
             external.Add(handle);
+            externalSources.Add(source, handle);
             return handle;
         }
 
@@ -365,6 +368,7 @@ namespace AudioOrbit
                 if (playbacks[i].External == h)
                     End(playbacks[i], PlaybackEndReason.Stopped);
             h.Snapshot.Restore(h.Source);
+            if (!ReferenceEquals(h.Source, null)) externalSources.Remove(h.Source);
             external.Remove(h);
             if (string.IsNullOrEmpty(h.Options.Key))
             {

@@ -36,24 +36,6 @@ namespace AudioOrbit
                 }
 
                 var category = categories[d.Category];
-                Playback previous = null;
-                if (ext != null)
-                {
-                    foreach (var existingPlayback in playbacks)
-                        if (existingPlayback.External == ext)
-                        {
-                            previous = existingPlayback;
-                            break;
-                        }
-
-                    if (previous != null)
-                    {
-                        if (ext.Options.RepeatBehavior == ExternalRepeatBehavior.RejectNew)
-                            return Reject(PlayRejectionReason.PlaybackLimit);
-                        AddVictim(ref victims, previous);
-                    }
-                }
-
                 var now = Time.unscaledTimeAsDouble;
 #if UNITY_EDITOR
                 now = editorTime?.Invoke() ?? now;
@@ -112,7 +94,7 @@ namespace AudioOrbit
 #endif
                 if (victims != null)
                     foreach (var victim in victims)
-                        End(victim, victim == previous ? PlaybackEndReason.Stopped : PlaybackEndReason.Stolen);
+                        End(victim, PlaybackEndReason.Stolen);
                 source = ext != null ? ext.Source : pool.Count > 0 ? pool.Pop() : CreateSource();
                 if (source == null) throw new InvalidOperationException("AudioSource was destroyed.");
                 source.clip = ext != null ? ext.Snapshot.Clip : clip;
