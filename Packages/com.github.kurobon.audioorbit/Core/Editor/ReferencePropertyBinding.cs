@@ -37,8 +37,7 @@ namespace AudioOrbit.Editor
 
         public static void Track(VisualElement root, SerializedObject data, Action refresh)
         {
-            root.RegisterCallback<AttachToPanelEvent>(evt => root.TrackSerializedObjectValue(data, _ => refresh()));
-            root.RegisterCallback<DetachFromPanelEvent>(_ => root.Unbind());
+            root.TrackSerializedObjectValue(data, _ => refresh());
         }
     }
 }
