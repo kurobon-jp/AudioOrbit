@@ -10,14 +10,13 @@ namespace AudioOrbit.Samples.BasicPlayback
         [SerializeField] private AudioLibrary library;
         [SerializeField] private Text status;
         private AudioEngine engine;
-        private LibraryHandle handle;
 
         private void OnEnable() => engine = new AudioEngine(settings);
         private void OnDisable() => engine.Dispose();
 
         public void Preload()
         {
-            handle = engine.RegisterLibrary(library);
+            engine.Preload(library);
             status.text = "Library Preloaded.";
         }
         
@@ -44,11 +43,7 @@ namespace AudioOrbit.Samples.BasicPlayback
         public void Release()
         {
             engine.StopAll();
-            if (handle != null)
-            {
-                engine.UnregisterLibrary(handle);
-                handle = null;
-            }
+            engine.ReleaseLibrary(library);
 
             status.text = "Not loaded";
         }

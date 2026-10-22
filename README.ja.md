@@ -84,7 +84,7 @@ public sealed class AudioExample : MonoBehaviour
     private void Awake()
     {
         engine = new AudioEngine(settings);
-        engine.RegisterLibrary(library);
+        engine.Preload(library);
         attack = engine.CreatePlayback("attack");
         attack.StateChanged += (_, state) => Debug.Log(state);
     }
@@ -140,7 +140,20 @@ public void StopAttack() => playback.Stop(fadeSeconds: 0.2f);
 
 ### Engineの一括停止
 
-EngineにはStopAll・StopCategory・StopOwner・StopLibraryと、それぞれのAsync版があります。フェードには非スケール時間を使います。
+EngineにはStopAll・StopCategory・StopOwner・StopLibraryと、それぞれのAsync版があります。StopLibraryには対象のAudioLibraryを渡します。フェードには非スケール時間を使います。
+
+### ロード済みAudioLibrary
+
+```csharp
+engine.Preload(library);
+var playback = engine.CreatePlayback("attack");
+playback.Play();
+
+// Libraryが不要になったらEngineのキャッシュを解放します。
+engine.ReleaseLibrary(library);
+```
+
+`Preload(AudioLibrary)`はロード済みのアセットを同期的に登録します。同じアセットを繰り返し渡してもKeyを重複登録しません。Loader・Library参照と同じキャッシュ管理を使用します。`ReleaseLibrary`はEngineのキャッシュ保持を解放し、再生中のLibraryは終了まで保持します。利用者が渡したアセット自体をEngineが破棄することはありません。
 
 ## AudioLibraryLoader
 
@@ -182,15 +195,28 @@ playback.Play();
 `IAudioLibraryReference`はロードするLibraryの所在を表します。Resources版はパス、Addressables版はAssetReferenceを保持します。
 
 ```csharp
-var libraryReference = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" };
-await engine.PreloadAsync(libraryReference, token);
-// Libraryのキャッシュが不要になったとき
-engine.ReleaseLibrary(libraryReference);
+[SerializeReference] private IAudioLibraryReference library;
+
+await engine.PreloadAsync(library, token);
+var playback = engine.CreatePlayback("bgm");
+playback.Play();
 ```
+
+![LibraryReference](docs/images/library_reference.png)
 
 ## AudioReference
 
 `IAudioReference`は再生対象を保持する参照です。Libraryのロード情報とAudioのKeyをまとめたResources／Addressables参照なら、`engine.CreatePlayback(reference)`から`Play()`するだけで、未ロードのLibraryも自動ロードします。ResourcesAudioReference／AddressablesAudioReferenceは`IAudioReference`を実装し、Library参照とAudioのKeyを保持します。Library参照が作成したLoaderはEngineが管理します。
+
+
+```csharp
+[SerializeReference] private IAudioReference bgmReference;
+
+var playback = engine.CreatePlayback(bgmReference);
+playback.Play();
+```
+
+![AudioReference](docs/images/audio_reference.png)
 
 Engine Audio Referenceは登録済みKey、Direct Audio ReferenceはClipを直接参照するため、Libraryの自動ロードは行いません。
 
@@ -208,17 +234,6 @@ Engine Audio Referenceは登録済みKey、Direct Audio ReferenceはClipを直�
 
 `ResourcesAudioReference`は、`ResourcesLibraryReference`型のLibraryとAudioのKeyを保持します。Resources相対パスはLibrary側に設定します。Inspectorでは、Library、Audio候補、Library Managerを開くボタンを表示します。
 
-```csharp
-private ResourcesAudioReference reference = new ResourcesAudioReference
-{
-    Library = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" },
-    Key = "voice_attack"
-};
-
-// 最初の例のAwakeで、RegisterLibraryとCreatePlayback("attack")の代わりに使用。
-attack = engine.CreatePlayback(reference);
-```
-
 Libraryは、例えば`Assets/Game/Resources/Audio/VoiceLibrary.asset`に配置します。`PlayAttack()`と破棄処理は最初の例と同じです。
 
 `[SerializeReference] private IAudioLibraryReference library;`ではLibraryだけを設定します。ResourcesLibraryReference／AddressablesLibraryReferenceを選べ、Audioの選択欄はありません。再生対象を設定する場合は`IAudioReference`を使用します。配列にも対応します。
@@ -234,7 +249,6 @@ using AudioOrbit.Addressables;
 
 [SerializeField] private AddressablesAudioReference attackReference;
 
-// 最初の例のAwakeで、RegisterLibraryとCreatePlayback("attack")の代わりに使用。
 attack = engine.CreatePlayback(attackReference);
 ```
 

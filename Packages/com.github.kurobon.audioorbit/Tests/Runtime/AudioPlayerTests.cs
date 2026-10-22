@@ -85,7 +85,7 @@ namespace AudioOrbit.Tests
         [Test] public void EngineReferenceUsesTheSelectedEngineWithoutALoader()
         {
             var engine = OrbitContext.Get();
-            engine.RegisterLibrary(library);
+            engine.Preload(library);
             var player = Player(false);
             Set(player, "reference", new EngineAudioReference("player_test"));
             player.gameObject.SetActive(true);

@@ -83,7 +83,7 @@ public sealed class AudioExample : MonoBehaviour
     private void Awake()
     {
         engine = new AudioEngine(settings);
-        engine.RegisterLibrary(library);
+        engine.Preload(library);
         attack = engine.CreatePlayback("attack");
         attack.StateChanged += (_, state) => Debug.Log(state);
     }
@@ -139,7 +139,20 @@ A new handle starts in `Idle`. Subscribe with `playback.StateChanged += OnStateC
 
 ### Engine-wide stop operations
 
-The engine provides StopAll, StopCategory, StopOwner, and StopLibrary, each with an Async counterpart. Fades use unscaled time.
+The engine provides StopAll, StopCategory, StopOwner, and StopLibrary, each with an Async counterpart. Pass the target AudioLibrary to StopLibrary. Fades use unscaled time.
+
+### Already loaded AudioLibrary
+
+```csharp
+engine.Preload(library);
+var playback = engine.CreatePlayback("attack");
+playback.Play();
+
+// Drop this Library's engine cache when it is no longer needed.
+engine.ReleaseLibrary(library);
+```
+
+`Preload(AudioLibrary)` registers an already loaded asset synchronously. Repeating it with the same asset does not register duplicate keys. It uses the same cache management as loaders and Library references. `ReleaseLibrary` drops the engine's cache hold; active playback keeps the Library until it ends. The engine does not destroy an asset supplied by the caller.
 
 ## AudioLibraryLoader
 
@@ -181,15 +194,27 @@ playback.Play();
 `IAudioLibraryReference` identifies the Library to load. The Resources implementation stores a path; the Addressables implementation stores an AssetReference.
 
 ```csharp
-var libraryReference = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" };
-await engine.PreloadAsync(libraryReference, token);
-// When the Library cache is no longer needed
-engine.ReleaseLibrary(libraryReference);
+[SerializeReference] private IAudioLibraryReference library;
+
+await engine.PreloadAsync(library, token);
+var playback = engine.CreatePlayback("bgm");
+playback.Play();
 ```
+
+![LibraryReference](docs/images/library_reference.png)
 
 ## AudioReference
 
 `IAudioReference` identifies what to play. Resources and Addressables references combine library loading information with an Audio entry key. Create a handle with `engine.CreatePlayback(reference)` and call `Play()` to load an unloaded library automatically. ResourcesAudioReference and AddressablesAudioReference implement `IAudioReference` and hold a Library reference plus an Audio entry key. The engine manages loaders created by Library references.
+
+```csharp
+[SerializeReference] private IAudioReference bgmReference;
+
+var playback = engine.CreatePlayback(bgmReference);
+playback.Play();
+```
+
+![AudioReference](docs/images/audio_reference.png)
 
 Engine Audio Reference uses a registered key, while Direct Audio Reference points directly to a Clip; neither loads a library automatically.
 
@@ -207,17 +232,6 @@ Engine Audio Reference uses a registered key, while Direct Audio Reference point
 
 `ResourcesAudioReference` holds a Library of type `ResourcesLibraryReference` plus an Audio entry key. The Library reference stores the Resources-relative path. Its Inspector provides a Library field, Audio selector, and button to open Library Manager.
 
-```csharp
-private ResourcesAudioReference reference = new ResourcesAudioReference
-{
-    Library = new ResourcesLibraryReference { LibraryPath = "Audio/VoiceLibrary" },
-    Key = "voice_attack"
-};
-
-// In the first example's Awake, replace RegisterLibrary and CreatePlayback("attack") with:
-attack = engine.CreatePlayback(reference);
-```
-
 For example, place the library at `Assets/Game/Resources/Audio/VoiceLibrary.asset`. Use the first example's `PlayAttack()` and destruction cleanup.
 
 Declare `[SerializeReference] private IAudioLibraryReference library;` to configure only a Library, choosing ResourcesLibraryReference or AddressablesLibraryReference without an Audio selector. Use `IAudioReference` for playback references. Arrays are supported.
@@ -233,7 +247,6 @@ using AudioOrbit.Addressables;
 
 [SerializeField] private AddressablesAudioReference attackReference;
 
-// In the first example's Awake, replace RegisterLibrary and CreatePlayback("attack") with:
 attack = engine.CreatePlayback(attackReference);
 ```
 

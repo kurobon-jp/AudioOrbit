@@ -154,7 +154,7 @@ namespace AudioOrbit
         System.Collections.Generic.IReadOnlyList<AudioLibrary> Libraries { get; }
     }
 
-    public sealed class LibraryHandle
+    internal sealed class LibraryHandle
     {
         internal AudioEngine Engine;
         internal readonly System.Collections.Generic.List<string> Keys = new();

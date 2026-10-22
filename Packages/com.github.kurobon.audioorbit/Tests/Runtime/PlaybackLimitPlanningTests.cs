@@ -35,7 +35,7 @@ namespace AudioOrbit.Tests
 #if UNITY_EDITOR
             typeof(AudioEngine).GetField("editorTime", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(engine, (Func<double>)(() => now));
 #endif
-            engine.RegisterLibrary(library);
+            engine.Preload(library);
         }
         [TearDown] public void Cleanup() { engine?.Dispose(); foreach (var value in objects) if (value != null) UnityEngine.Object.DestroyImmediate(value); objects.Clear(); }
 

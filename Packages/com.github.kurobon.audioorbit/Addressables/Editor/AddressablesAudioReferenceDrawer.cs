@@ -120,9 +120,24 @@ namespace AudioOrbit.Addressables.Editor
                 }
                 rejectedAssignment = false;
                 libraryGuid.stringValue = guid;
-                library.FindPropertyRelative("m_SubObjectName").stringValue = string.Empty;
-                library.FindPropertyRelative("m_SubObjectType").stringValue = string.Empty;
-                library.FindPropertyRelative("m_SubObjectGUID").stringValue = string.Empty;
+                var subObjectName = library.FindPropertyRelative("m_SubObjectName");
+                if (subObjectName != null)
+                {
+                    subObjectName.stringValue = string.Empty;
+                }
+
+                var subObjectType = library.FindPropertyRelative("m_SubObjectType");
+                if (subObjectType != null)
+                {
+                    subObjectType.stringValue = string.Empty;
+                }
+
+                var subObjectGuid = library.FindPropertyRelative("m_SubObjectGUID");
+                if (subObjectGuid != null)
+                {
+                    subObjectGuid.stringValue = string.Empty;
+                }
+
                 data.ApplyModifiedProperties();
                 Refresh();
             });

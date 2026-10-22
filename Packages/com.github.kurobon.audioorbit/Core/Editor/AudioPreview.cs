@@ -70,7 +70,7 @@ namespace AudioOrbit.Editor
                     snapshot.Entries.Add(sound);
                     engine = new AudioEngine(settings);
                     engine.ConfigureEditorPreview(scene);
-                    engine.RegisterLibrary(snapshot);
+                    engine.Preload(snapshot);
                     playback = engine.CreatePlayback(sound.Key);
                     id = sound.Key;
                     definition = json;

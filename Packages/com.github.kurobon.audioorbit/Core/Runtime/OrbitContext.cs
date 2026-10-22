@@ -91,7 +91,7 @@ namespace AudioOrbit
                 if (!Application.isPlaying) ConfigureEditorEngine(engine);
 #endif
                 foreach (var library in selected.Libraries ?? Array.Empty<AudioLibrary>())
-                    engine.RegisterLibrary(library);
+                    engine.Preload(library);
                 engines.Add(key, engine);
                 return engine;
             }

@@ -21,7 +21,7 @@ namespace AudioOrbit.Tests
             library = ScriptableObject.CreateInstance<AudioLibrary>();
             var sound = new AudioDefinition { Key = "reusable", Loop = true };
             sound.Clips.Add(new ClipDefinition { Clip = clip }); library.Entries.Add(sound);
-            engine = new AudioEngine(settings); engine.RegisterLibrary(library);
+            engine = new AudioEngine(settings); engine.Preload(library);
         }
         [TearDown] public void Cleanup()
         {
@@ -48,7 +48,7 @@ namespace AudioOrbit.Tests
             var definition = new AudioDefinition { Key = reference.Key, Loop = true };
             definition.Clips.Add(new ClipDefinition { Clip = clip });
             pendingLibrary.Entries.Add(definition);
-            engine.RegisterLibrary(pendingLibrary);
+            engine.Preload(pendingLibrary);
             playback.Play();
             Assert.True(playback.Started);
             Assert.AreEqual(reference.Key, playback.Key);

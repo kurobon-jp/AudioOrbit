@@ -199,7 +199,9 @@ namespace AudioOrbit.Tests
         }
         [Test] public void FailedInitializationCanBeCorrected()
         {
-            Set(context, "definitions", new[] { new EngineDefinition { Settings = settings, Libraries = new[] { library, library } } });
+            var conflictingLibrary = Asset<AudioLibrary>();
+            conflictingLibrary.Entries.Add(library.Entries[0]);
+            Set(context, "definitions", new[] { new EngineDefinition { Settings = settings, Libraries = new[] { library, conflictingLibrary } } });
             Assert.Throws<ArgumentException>(() => OrbitContext.Get());
             Assert.False(OrbitContext.TryGet(OrbitContext.DefaultKey, out _));
             Set(context, "definitions", new[] { new EngineDefinition { Settings = settings, Libraries = new[] { library } } });

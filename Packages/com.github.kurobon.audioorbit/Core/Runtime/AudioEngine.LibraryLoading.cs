@@ -8,6 +8,50 @@ namespace AudioOrbit
 {
     public sealed partial class AudioEngine
     {
+        private sealed class DirectLibraryLoader : IAudioLibraryLoader
+        {
+            private sealed class Lease : IAudioLibraryLease
+            {
+                public IReadOnlyList<AudioLibrary> Libraries { get; private set; }
+                internal Lease(AudioLibrary library) => Libraries = new[] { library };
+                public void Dispose() => Libraries = null;
+            }
+
+            private readonly AudioLibrary library;
+            internal DirectLibraryLoader(AudioLibrary library) => this.library = library;
+            public Task<IAudioLibraryLease> LoadAsync(CancellationToken cancellationToken = default)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                return Task.FromResult(CreateLease());
+            }
+            internal IAudioLibraryLease CreateLease() => new Lease(library);
+            public void Dispose() { }
+        }
+
+        private readonly Dictionary<AudioLibrary, DirectLibraryLoader> directLibraryLoaders = new();
+
+        /// <summary>Caches an already loaded Library. The caller retains ownership of the asset.</summary>
+        public void Preload(AudioLibrary library)
+        {
+            Check();
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            if (directLibraryLoaders.ContainsKey(library)) return;
+            var loader = new DirectLibraryLoader(library);
+            var cached = RegisterLoadedLibraries(loader, loader.CreateLease());
+            libraryLoads.Add(loader, Task.FromResult(cached));
+            directLibraryLoaders.Add(library, loader);
+        }
+
+        /// <summary>Releases a directly supplied Library cache. Active playback retains its resources.</summary>
+        public void ReleaseLibrary(AudioLibrary library)
+        {
+            Check();
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            if (!directLibraryLoaders.TryGetValue(library, out var loader)) return;
+            directLibraryLoaders.Remove(library);
+            ReleaseLibrary(loader);
+        }
+
         private sealed class SelectionHistory
         {
             internal int Last, Position;
@@ -94,15 +138,18 @@ namespace AudioOrbit
             Check();
             if (loader == null) throw new ArgumentNullException(nameof(loader));
             ForgetLoaderReferences(loader);
-            if (!libraryLoads.TryGetValue(loader, out var operation)) return;
-            libraryLoads.Remove(loader);
+            if (!libraryLoads.Remove(loader, out var operation)) return;
             if (operation.IsCompletedSuccessfully) operation.Result.Dispose();
             else _ = ReleaseCachedLoad(operation);
         }
 
         private static async Task ReleaseCachedLoad(Task<SessionReference> operation)
         {
-            try { (await operation).Dispose(); } catch { }
+            try { (await operation).Dispose(); }
+            catch
+            {
+                // ignored
+            }
         }
 
         private async Task<SessionReference> AcquireLibrariesCore(IAudioLibraryLoader libraryLoader, CancellationToken token)
@@ -124,9 +171,16 @@ namespace AudioOrbit
                     throw;
                 }
             }
+            try { Check(); token.ThrowIfCancellationRequested(); }
+            catch { lease?.Dispose(); throw; }
+            return RegisterLoadedLibraries(libraryLoader, lease);
+        }
+
+        private SessionReference RegisterLoadedLibraries(IAudioLibraryLoader libraryLoader, IAudioLibraryLease lease)
+        {
             try
             {
-                Check(); token.ThrowIfCancellationRequested();
+                Check();
                 if (lease?.Libraries == null || lease.Libraries.Count == 0)
                     throw new InvalidOperationException("Library loader returned no libraries.");
                 if (librarySessions.TryGetValue(libraryLoader, out var existing))
@@ -140,7 +194,7 @@ namespace AudioOrbit
                     foreach (var library in lease.Libraries)
                     {
                         if (library == null) throw new ArgumentException("Null library.");
-                        bool fresh = !sharedLibraries.TryGetValue(library, out var shared);
+                        var fresh = !sharedLibraries.TryGetValue(library, out var shared);
                         if (fresh)
                         {
                             shared = new SharedLibrary { Asset = library, Handle = RegisterLibrary(library) };
@@ -178,7 +232,11 @@ namespace AudioOrbit
 
         private static async Task ReclaimLibraries(Task<IAudioLibraryLease> operation)
         {
-            try { (await operation)?.Dispose(); } catch { }
+            try { (await operation)?.Dispose(); }
+            catch
+            {
+                // ignored
+            }
         }
 
         private void ReleaseLibrarySession(LibrarySession session)

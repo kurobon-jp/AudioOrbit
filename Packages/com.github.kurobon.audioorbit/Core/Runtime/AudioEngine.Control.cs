@@ -243,10 +243,12 @@ namespace AudioOrbit
             StopGroup(new StopFilter(StopScope.Category, category), fadeSeconds, false);
         public void StopOwner(Object owner, float fadeSeconds = 0) =>
             StopGroup(new StopFilter(StopScope.Owner, owner: owner), fadeSeconds, false);
-        public void StopLibrary(LibraryHandle library, float fadeSeconds = 0)
+        public void StopLibrary(AudioLibrary library, float fadeSeconds = 0)
         {
-            Check(); ValidateLibrary(library);
-            StopGroup(new StopFilter(StopScope.Library, library: library), fadeSeconds, false);
+            Check(); ValidateNonNegative(fadeSeconds, nameof(fadeSeconds));
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            if (sharedLibraries.TryGetValue(library, out var shared))
+                StopGroup(new StopFilter(StopScope.Library, library: shared.Handle), fadeSeconds, false);
         }
         /// <summary>Stops current requests and playbacks. Cancellation cancels only waiting.</summary>
         public Task StopAllAsync(float fadeSeconds = 0, CancellationToken cancellationToken = default) =>
@@ -255,10 +257,13 @@ namespace AudioOrbit
             StopGroup(new StopFilter(StopScope.Category, category), fadeSeconds, true, cancellationToken);
         public Task StopOwnerAsync(Object owner, float fadeSeconds = 0, CancellationToken cancellationToken = default) =>
             StopGroup(new StopFilter(StopScope.Owner, owner: owner), fadeSeconds, true, cancellationToken);
-        public Task StopLibraryAsync(LibraryHandle library, float fadeSeconds = 0, CancellationToken cancellationToken = default)
+        public Task StopLibraryAsync(AudioLibrary library, float fadeSeconds = 0, CancellationToken cancellationToken = default)
         {
-            Check(); ValidateLibrary(library);
-            return StopGroup(new StopFilter(StopScope.Library, library: library), fadeSeconds, true, cancellationToken);
+            Check(); ValidateNonNegative(fadeSeconds, nameof(fadeSeconds));
+            if (library == null) throw new ArgumentNullException(nameof(library));
+            return sharedLibraries.TryGetValue(library, out var shared)
+                ? StopGroup(new StopFilter(StopScope.Library, library: shared.Handle), fadeSeconds, true, cancellationToken)
+                : Task.CompletedTask;
         }
         public void SetMasterVolume(float volume)
         {
