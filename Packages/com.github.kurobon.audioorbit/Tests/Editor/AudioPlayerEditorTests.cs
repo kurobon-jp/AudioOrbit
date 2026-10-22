@@ -55,6 +55,16 @@ namespace AudioOrbit.Tests.Editor
                 picker.value = UnityEditor.ObjectNames.NicifyVariableName(nameof(ResourcesAudioReference));
                 using var serialized = new SerializedObject(player);
                 Assert.IsInstanceOf<ResourcesAudioReference>(serialized.FindProperty("reference").managedReferenceValue);
+                var previousPicker = picker;
+                var deadline = EditorApplication.timeSinceStartup + 3;
+                do
+                {
+                    await Task.Delay(20);
+                    picker = root.Q<DropdownField>("reference-type");
+                } while ((picker == null || picker == previousPicker || picker.panel == null) &&
+                         EditorApplication.timeSinceStartup < deadline);
+                Assert.NotNull(picker);
+                Assert.AreNotSame(previousPicker, picker, "Type changes must rebuild the reference UI.");
                 picker.value = "None";
                 serialized.Update(); Assert.Null(serialized.FindProperty("reference").managedReferenceValue);
             }

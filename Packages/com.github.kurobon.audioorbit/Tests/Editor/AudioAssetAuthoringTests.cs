@@ -43,10 +43,9 @@ namespace AudioOrbit.Tests.Editor
 #endif
         [Test] public void InlineClipReferenceSurvivesAssetRename()
         {
-            var sourcePath = AssetDatabase.GUIDToAssetPath(AssetDatabase.FindAssets("t:AudioClip")[0]);
-            var path = folder + "/Tone" + System.IO.Path.GetExtension(sourcePath);
-            Assert.True(AssetDatabase.CopyAsset(sourcePath, path));
-            var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+            var path = folder + "/Tone.asset";
+            var clip = AudioClip.Create("Tone", 100, 1, 44100, false);
+            AssetDatabase.CreateAsset(clip, path);
             var library = Create<AudioLibrary>("Library");
             var sound = new AudioDefinition { Key = Guid.NewGuid().ToString("N") };
             library.Entries.Add(sound);

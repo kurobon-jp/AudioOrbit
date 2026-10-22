@@ -73,6 +73,8 @@ namespace AudioOrbit.Editor
                 if (!binding.TryGet(out _)) return;
                 var index = names.IndexOf(evt.newValue);
                 if (index < 0) return;
+                var field = root.GetFirstAncestorOfType<PropertyField>();
+                root.Unbind();
                 Undo.SetCurrentGroupName(referenceType == typeof(IAudioReference) ? "Change Audio reference type" : "Change Library reference type");
                 foreach (var target in data.targetObjects)
                 {
@@ -86,6 +88,7 @@ namespace AudioOrbit.Editor
                 var updated = data.FindProperty(propertyPath);
                 if (updated != null) binding = new ReferencePropertyBinding(updated);
                 Refresh();
+                if (updated != null && field != null) field.BindProperty(updated);
             });
             root.Add(picker);
             ReferencePropertyBinding.Track(root, data, Refresh);
