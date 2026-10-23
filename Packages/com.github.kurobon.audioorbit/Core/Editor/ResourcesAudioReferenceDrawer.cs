@@ -34,12 +34,14 @@ namespace AudioOrbit.Editor
             else AudioReferenceDrawer.AddTypePicker(root, property);
 
             var libraryField = new ObjectField("Library") { objectType = typeof(AudioLibrary), allowSceneObjects = false };
+            libraryField.AddToClassList(BaseField<UnityEngine.Object>.alignedFieldUssClassName);
             root.Add(libraryField);
             // root.Add(new PropertyField(path, "Library Path"));
             var warning = new HelpBox("Select an AudioLibrary inside a Resources folder.", HelpBoxMessageType.Error);
             root.Add(warning);
             var row = new VisualElement { style = { flexDirection = FlexDirection.Row } };
             var popup = new PopupField<string>("Audio", new List<string> { "None" }, 0) { style = { flexGrow = 1 } };
+            popup.AddToClassList(BaseField<string>.alignedFieldUssClassName);
             row.Add(popup);
             var open = new Button { text = "Open", tooltip = "Open the selected Audio in the Library Manager." };
             row.Add(open);
