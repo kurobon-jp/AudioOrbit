@@ -60,6 +60,7 @@ namespace AudioOrbit.Editor
                 ? type.FullName : ObjectNames.NicifyVariableName(type.Name)).ToList();
             names.Insert(0, "None");
             var picker = new DropdownField("Reference Type", names, 0) { name = referenceType == typeof(IAudioReference) ? "reference-type" : "library-reference-type" };
+            picker.AddToClassList(BaseField<string>.alignedFieldUssClassName);
             void Refresh()
             {
                 if (!binding.TryGet(out var current)) { picker.SetEnabled(false); return; }

@@ -55,6 +55,7 @@ namespace AudioOrbit.Editor
             var row = new VisualElement();
             row.style.flexDirection = FlexDirection.Row;
             var picker = new DropdownField("Engine") { name = "engine-key" };
+            picker.AddToClassList(BaseField<string>.alignedFieldUssClassName);
             picker.style.flexGrow = 1;
             var add = new Button(() =>
             {

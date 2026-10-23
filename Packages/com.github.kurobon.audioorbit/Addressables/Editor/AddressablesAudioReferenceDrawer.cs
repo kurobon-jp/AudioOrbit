@@ -31,6 +31,7 @@ namespace AudioOrbit.Addressables.Editor
                 allowSceneObjects = false,
                 tooltip = "Select an AudioLibrary registered in Addressables."
             };
+            libraryField.AddToClassList(BaseField<Object>.alignedFieldUssClassName);
             root.Add(libraryField);
             var validation = new HelpBox(string.Empty, HelpBoxMessageType.Error) { name = "addressable-library-validation" };
             validation.style.display = DisplayStyle.None;
@@ -40,6 +41,7 @@ namespace AudioOrbit.Addressables.Editor
             var choices = new List<string>();
             var keys = new List<string>();
             var popup = new PopupField<string>("Audio", new List<string> { "None" }, 0);
+            popup.AddToClassList(BaseField<string>.alignedFieldUssClassName);
             popup.style.flexGrow = 1;
             row.Add(popup);
             var open = new Button { text = "Open", tooltip = "Open the selected Audio in the Library Manager." };

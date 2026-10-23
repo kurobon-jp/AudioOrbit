@@ -71,6 +71,7 @@ namespace AudioOrbit.Editor
             });
 
             var field = AudioGeneratorPicker.CreateField("Clip");
+            field.AddToClassList(BaseField<Object>.alignedFieldUssClassName);
             field.AddToClassList("audioorbit-clip-resource-field");
 
             void Refresh()
