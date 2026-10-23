@@ -66,7 +66,7 @@ AudioDefinition and ClipDefinition are serialized inside the library. You do not
 
 AudioCategory is a ScriptableObject that groups volume, mute, simultaneous playback limits, and mixer routing for categories such as BGM, sound effects, and UI. Create one through `Create > AudioOrbit > Audio Category` and assign it to the Category of each AudioDefinition in an AudioLibrary. Multiple Libraries can share the same Category.
 
-<img width="50%" src="docs/images/audio_category.png">
+<img width="50%" src="docs/images/audio_category.png" alt="AudioCategory Inspector settings">
 
 | Setting | Description |
 |---|---|

@@ -67,7 +67,7 @@ AudioDefinitionとClipDefinitionはLibrary内に保存するシリアライズ�
 
 AudioCategoryは、BGM・SE・UIなどの分類ごとに、音量・ミュート・同時再生数・Mixer出力をまとめて設定するScriptableObjectです。`Create > AudioOrbit > Audio Category`で作成し、AudioLibrary内の各AudioDefinitionのCategoryに割り当てます。同じCategoryを複数のLibraryで共有できます。
 
-<img width="50%" src="docs/images/audio_category.png">
+<img width="50%" src="docs/images/audio_category.png" alt="AudioCategoryのInspector設定画面">
 
 | 設定 | 内容 |
 |---|---|
