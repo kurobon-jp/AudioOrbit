@@ -62,6 +62,34 @@ Create one through `Assets > Create > AudioOrbit > Audio Library` and edit its c
 
 AudioDefinition and ClipDefinition are serialized inside the library. You do not need a ScriptableObject per audio asset. Ordinary Clips use AudioClip. Unity 6.3 and later also support IAudioGenerator assets such as LoopRegionClip.
 
+## AudioCategory
+
+AudioCategory is a ScriptableObject that groups volume, mute, simultaneous playback limits, and mixer routing for categories such as BGM, sound effects, and UI. Create one through `Create > AudioOrbit > Audio Category` and assign it to the Category of each AudioDefinition in an AudioLibrary. Multiple Libraries can share the same Category.
+
+<img width="50%" src="docs/images/audio_category.png" alt="AudioCategory Inspector settings">
+
+| Setting | Description |
+|---|---|
+| Mixer Output | Output AudioMixerGroup for the AudioSource |
+| Volume | Category volume, multiplied by each audio entry's volume |
+| Muted | Mutes the category while playback positions continue to advance |
+| Max Playbacks | Maximum simultaneous playbacks in the category. `0` means unlimited |
+| Priority | Playback priority when not specified in PlayOptions. Higher values mean higher priority |
+| Limit Behavior | Behavior when the limit is reached. Reject New rejects the new playback, Stop Oldest stops the oldest playback, and Stop Lowest Priority stops the playback with the lowest priority |
+| Ignore Listener Pause | Ignores pauses caused by `AudioListener.pause`. Useful for UI sounds that should play while the game is paused |
+
+After registering the Category with an Engine, for example by preloading its Library, you can change its runtime settings.
+
+```csharp
+engine.SetCategoryVolume(seCategory.Id, 0.5f);
+engine.SetCategoryMuted(bgmCategory.Id, true);
+engine.SetCategoryIgnoreListenerPause(uiCategory.Id, true);
+
+AudioListener.pause = true; // Pause normal audio while the UI category continues playing
+```
+
+These changes affect active and subsequent playbacks in the same Engine. They do not modify the Category asset or other Engines. Enabling `Ignore Listener Pause` does not bypass an explicit `PlaybackHandle.Pause()`. Use `StopCategory` or `StopCategoryAsync` to stop the entire category.
+
 ## First playback
 
 1. Create settings using `Assets > Create > AudioOrbit > Engine Settings`.

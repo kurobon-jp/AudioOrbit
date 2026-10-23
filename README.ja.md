@@ -63,6 +63,34 @@ Libraryは用途やロードする単位に合わせて分けられます。直�
 
 AudioDefinitionとClipDefinitionはLibrary内に保存するシリアライズデータです。音源ごとのScriptableObjectは不要です。通常のClipにはAudioClipを設定します。Unity 6.3以降ではLoopRegionClipなどのIAudioGeneratorも設定できます。
 
+## AudioCategory
+
+AudioCategoryは、BGM・SE・UIなどの分類ごとに、音量・ミュート・同時再生数・Mixer出力をまとめて設定するScriptableObjectです。`Create > AudioOrbit > Audio Category`で作成し、AudioLibrary内の各AudioDefinitionのCategoryに割り当てます。同じCategoryを複数のLibraryで共有できます。
+
+<img width="50%" src="docs/images/audio_category.png" alt="AudioCategoryのInspector設定画面">
+
+| 設定 | 内容 |
+|---|---|
+| Mixer Output | AudioSourceの出力先AudioMixerGroup |
+| Volume | カテゴリー音量。各音源の音量に乗算します |
+| Muted | カテゴリーをミュートします。再生位置は進みます |
+| Max Playbacks | カテゴリー内の同時再生数の上限。`0`は無制限 |
+| Priority | PlayOptionsで指定しない場合の再生優先度。大きい値ほど高優先度 |
+| Limit Behavior | 上限到達時の処理。Reject Newは新規再生を拒否、Stop Oldestは最も古い再生を停止、Stop Lowest Priorityは最も優先度が低い再生を停止します |
+| Ignore Listener Pause | `AudioListener.pause`による一時停止を無視します。ポーズ中も鳴らしたいUI操作音などに使用します |
+
+LibraryをPreloadするなどしてCategoryをEngineに登録した後、実行時の設定を変更できます。
+
+```csharp
+engine.SetCategoryVolume(seCategory.Id, 0.5f);
+engine.SetCategoryMuted(bgmCategory.Id, true);
+engine.SetCategoryIgnoreListenerPause(uiCategory.Id, true);
+
+AudioListener.pause = true; // 通常の音を一時停止。UIカテゴリーは再生を継続
+```
+
+これらの変更は、同じEngine内の再生中の音と、以降に開始する音に適用されます。Categoryアセットや別のEngineには反映されません。`Ignore Listener Pause`を有効にしても、`PlaybackHandle.Pause()`による明示的な一時停止は有効です。カテゴリー全体を停止する場合は`StopCategory`／`StopCategoryAsync`を使用します。
+
 ## 最初の再生
 
 1. `Assets > Create > AudioOrbit > Engine Settings`で設定を作成します。
